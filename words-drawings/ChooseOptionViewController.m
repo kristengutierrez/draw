@@ -26,18 +26,15 @@
 @property (strong, nonatomic) NSMutableArray *pickedObjects;
 @property (strong, nonatomic) NSString *selectedOption;
 
-@property (strong,nonatomic) NSMutableArray *filmArray;
-@property (strong,nonatomic) NSMutableArray *tvArray;
-@property (strong,nonatomic) NSMutableArray *theatreArray;
+@property (strong,nonatomic) NSMutableArray *filmAndTVArray;
 @property (strong,nonatomic) NSMutableArray *musicArray;
 @property (strong,nonatomic) NSMutableArray *sportsArray;
 @property (strong,nonatomic) NSMutableArray *historyArray;
 @property (strong,nonatomic) NSMutableArray *scienceArray;
-@property (strong,nonatomic) NSMutableArray *natureArray;
 @property (strong,nonatomic) NSMutableArray *geographyArray;
-@property (strong,nonatomic) NSMutableArray *artArray;
-@property (strong,nonatomic) NSMutableArray *literatureArray;
-@property (strong,nonatomic) NSMutableArray *zanyMiscellanyArray;
+@property (strong,nonatomic) NSMutableArray *theArtsArray;
+
+@property (strong,nonatomic) NSMutableArray *thisRoundsPromptsArray;
 
 - (IBAction)option1Pressed:(UIButton *)sender;
 - (IBAction)option2Pressed:(UIButton *)sender;
@@ -55,46 +52,40 @@
   [self.option3Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
   [self.option4Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
   NSLog(@"%ld %ld", (long)self.numberOfPlayers, (long)self.durationOfRound);
+    
+  self.thisRoundsPromptsArray = [[NSMutableArray alloc] init];
   
   NSLog(@"You chose... wisely: %@", self.chosenCategory);
   
   
-   _filmArray = [NSMutableArray arrayWithObjects: @"The Godfather", @"Woody Allen", @"Steven Spielberg", @"Rocky", @"Rushmore", @"Back to the Future II", @"Alice in Wonderland", @"Boogie Nights", @"Space Jam", @"Mission: Impossible", @"Annie Hall", @"Being John Malkovich", @"Metropolis", @"The Dark Crystal", @"Vertigo", @"Star Trek", @"Iron Man", @"Hannibal Lecter", @"Meet the Parents", @"Beetlejuice", nil];
+   _filmAndTVArray = [NSMutableArray arrayWithObjects: @"The Godfather", @"Indiana Jones and The Last Crusade", @"Woody Allen", @"Steven Spielberg", @"Rocky", @"Rushmore", @"Back to the Future II", @"Alice in Wonderland", @"Boogie Nights", @"Space Jam", @"Mission: Impossible", @"Annie Hall", @"Being John Malkovich", @"Metropolis", @"The Dark Crystal", @"Vertigo", @"Star Trek", @"Iron Man", @"Hannibal", @"Meet the Parents", @"Beetlejuice", @"Seinfeld", @"Gilligan's Island", @"Home Improvement", @"Arrested Development", @"Mork and Mindy", @"GI-Joe", @"Weeds", @"Lost", @"The Twilight Zone", @"24", @"House, M.D.", nil];
    
-   _tvArray = [NSMutableArray arrayWithObjects: @"Seinfeld", @"Gilligan's Island", @"Home Improvement", @"Arrested Development", @"Mork and Mindy", @"GI-Joe", @"Weeds", @"Lost", @"The Twilight Zone", @"24", @"House, M.D.", nil];
+   _musicArray = [NSMutableArray arrayWithObjects: @"Madonna", @"Beethoven", @"Heartbreak Hotel", @"U Can't Touch This", @"Thriller", @"The Sound of Silence", @"Glenn Gould", @"November Rain", @"Paranoid Android", @"Magical Mystery Tour", @"John Cage", @"Nirvana", @"Michael Jackson", @"Frank Sinatra", @"Katy Perry", @"Tiny Tim", @"Bohemian Rhapsody", @"Enya", @"California Girls", @"Linda McCartney", nil];
    
-   _theatreArray = [NSMutableArray arrayWithObjects: @"Death of a Salesman", @"Romeo and Juliet", @"The Book of Mormon", @"Titus Andronicus", @"Neil Patrick Harris", @"The Tony Awards", @"West Side Story", @"Hamlet", @"Stephen Sondheim", @"Jesus Christ Superstar", @"Cat On a Hot Tin Roof", @"Hairspray", @"Pirates of the Carribean", @"Mean Girls", @"Tim Burton", nil];
+   _sportsArray = [NSMutableArray arrayWithObjects: @"Babe Ruth", @"Magic Johnson", @"7th Inning Stretch", @"Dennis Rodman", @"Michael Jordan", @"Shea Stadium", @"Chicago White Sox", @"San Francisco Giants", @"St. Louis Cardinals", @"The Rose Bowl", @"Cricket", nil];
    
-   _musicArray = [NSMutableArray arrayWithObjects: @"Madonna", @"Beethoven", @"Heartbreak Hotel", @"U Can't Touch This", @"Thriller", @"The Sound of Silence", @"I Feel Pretty", @"November Rain", @"Paranoid Android", @"A String Quartet", @"John Cage", @"Nirvana", nil];
+   _historyArray = [NSMutableArray arrayWithObjects: @"The French Revolution", @"The Cuban Missle Crisis", @"Catherine the Great", @"D-Day", @"Elvis meets Nixon", @"Washington Crossing the Delaware", @"The Discovery of King Tut's Tomb", @"The War of 1812", nil];
    
-   _sportsArray = [NSMutableArray arrayWithObjects: @"Babe Ruth", @"Magic Johnson", @"7th Inning Stretch", @"Cricket", nil];
+   _scienceArray = [NSMutableArray arrayWithObjects: @"Carl Sagan", @"Relativity", @"Jonas Salk", @"Isaac Newton", @"protons", @"gravity", @"Dark Matter", @"Chemistry", @"Biology", @"Vaccinations", nil];
    
-   _historyArray = [NSMutableArray arrayWithObjects: @"The French Revolution", @"The Cuban Missle Crisis", @"Catherine the Great", @"D-Day", nil];
+//   _natureArray = [NSMutableArray arrayWithObjects: @"Three-Toed Sloths", @"Mt. Rainier", @"The Grand Canyon", @"The Pacific Ocean", nil];
    
-   _scienceArray = [NSMutableArray arrayWithObjects: @"Carl Sagan", @"Relativity", @"Jonas Salk", @"Isaac Newton", @"protons", nil];
+   _geographyArray = [NSMutableArray arrayWithObjects: @"Paris", @"Antarctica", @"Las Vegas", @"South Dakota", @"Chicago", @"The Nile River", @"China", @"Malta", @"The Isle of Man", @"Orlando", @"Botswana", @"Argentina", @"Brazil", @"The Grand Canyon", @"South Africa", nil];
    
-   _natureArray = [NSMutableArray arrayWithObjects: @"Three-Toed Sloths", @"Mt. Rainier", @"The Grand Canyon", @"The Pacific Ocean", nil];
+   _theArtsArray = [NSMutableArray arrayWithObjects: @"The Mona Lisa", @"Pablo Picasso", @"Girl With Pearl Earring", @"Guernica", @"A Tale of Two Cities", @"Where the Sidewalk Ends", @"The Hobbit", @"Nausea", nil];
    
-   _geographyArray = [NSMutableArray arrayWithObjects: @"Paris", @"Antarctica", @"Las Vegas", @"South Dakota", @"Chicago", @"The Nile River", nil];
+//   _literatureArray = [NSMutableArray arrayWithObjects: @"A Tale of Two Cities", @"Where the Sidewalk Ends", @"The Hobbit", @"Nausea", nil];
    
-   _artArray = [NSMutableArray arrayWithObjects: @"The Mona Lisa", @"Pablo Picasso", @"Girl With Pearl Earring", @"Guernica", nil];
-   
-   _literatureArray = [NSMutableArray arrayWithObjects: @"A Tale of Two Cities", @"Where the Sidewalk Ends", @"The Hobbit", @"Nausea", nil];
-   
-   _zanyMiscellanyArray = [NSMutableArray arrayWithObjects: @"42", @"Penguins Playing Golf", @"Insomnia", @"Public Restroom", @"Grumpy Cat", @"Prom Night", @"Cat Fight", @"Mom Jeans", nil];
+//   _zanyMiscellanyArray = [NSMutableArray arrayWithObjects: @"42", @"Penguins Playing Golf", @"Insomnia", @"Public Restroom", @"Grumpy Cat", @"Prom Night", @"Cat Fight", @"Mom Jeans", @"Ed Bassmaster", nil];
     
   self.chosenCategoryLabel.text = self.chosenCategory;
 
   _pickedObjects = [[NSMutableArray alloc] init];
   
-  //_pickedObjects = _filmArray;
+  //_pickedObjects = _filmAndTVArray;
   
-  if ([_chosenCategory isEqualToString:@"FILM"]){
-    _pickedObjects = _filmArray;
-  } else if ([_chosenCategory isEqualToString:@"TV"]){
-    _pickedObjects = _tvArray;
-  } else if ([_chosenCategory isEqualToString:@"THEATRE"]){
-    _pickedObjects = _theatreArray;
+  if ([_chosenCategory isEqualToString:@"FILM & TV"]){
+    _pickedObjects = _filmAndTVArray;
   } else if ([_chosenCategory isEqualToString:@"MUSIC"]){
     _pickedObjects = _musicArray;
   } else if ([_chosenCategory isEqualToString:@"SPORTS"]){
@@ -103,26 +94,40 @@
     _pickedObjects = _historyArray;
   } else if ([_chosenCategory isEqualToString:@"SCIENCE"]){
     _pickedObjects = _scienceArray;
-  } else if ([_chosenCategory isEqualToString:@"NATURE"]){
-    _pickedObjects = _natureArray;
   } else if ([_chosenCategory isEqualToString:@"GEOGRAPHY"]){
     _pickedObjects = _geographyArray;
-  } else if ([_chosenCategory isEqualToString:@"ART"]){
-    _pickedObjects = _artArray;
-  } else if ([_chosenCategory isEqualToString:@"LITERATURE"]){
-    _pickedObjects = _literatureArray;
-  } else if ([_chosenCategory isEqualToString:@"ZANY MISCELLANY"]){
-    _pickedObjects = _zanyMiscellanyArray;
+  } else if ([_chosenCategory isEqualToString:@"THE ARTS"]){
+    _pickedObjects = _theArtsArray;
   }
-  
+    
+
+    NSInteger j = [_pickedObjects count];
+    
+    //randomize category selections. will always display exactly 4 options.
+    int remaining = 4;
+    
+    if (_pickedObjects.count >= remaining) {
+        while (remaining > 0) {
+            NSInteger k = arc4random_uniform((u_int32_t)j) % j;
+            NSLog(@"k = %ld", (long)k);
+            
+            NSString *string = _pickedObjects[k];
+            NSLog(@"%@", string);
+            if (![_thisRoundsPromptsArray containsObject:string]){
+                [_thisRoundsPromptsArray addObject:string];
+                remaining--;
+            }
+        }
+    }
+    
   //set text on buttons
-  NSString *option1Text = (NSString *)[_pickedObjects objectAtIndex:0];
+  NSString *option1Text = (NSString *)[_thisRoundsPromptsArray objectAtIndex:0];
   [_option1Button setTitle: option1Text forState: UIControlStateNormal];
-  NSString *option2Text = (NSString *)[_pickedObjects objectAtIndex:1];
+  NSString *option2Text = (NSString *)[_thisRoundsPromptsArray  objectAtIndex:1];
   [_option2Button setTitle: option2Text forState: UIControlStateNormal];
-  NSString *option3Text = (NSString *)[_pickedObjects objectAtIndex:2];
+  NSString *option3Text = (NSString *)[_thisRoundsPromptsArray objectAtIndex:2];
   [_option3Button setTitle: option3Text forState: UIControlStateNormal];
-  NSString *option4Text = (NSString *)[_pickedObjects objectAtIndex:3];
+  NSString *option4Text = (NSString *)[_thisRoundsPromptsArray  objectAtIndex:3];
   [_option4Button setTitle: option4Text forState: UIControlStateNormal];
   
 

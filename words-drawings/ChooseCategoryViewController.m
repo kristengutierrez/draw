@@ -44,16 +44,16 @@
   
   _thisRoundsArray = [[NSMutableArray alloc] init];
   
-  _categoriesArray = [NSMutableArray arrayWithObjects: @"FILM", @"TV", @"THEATRE", @"MUSIC", @"SPORTS", @"HISTORY", @"SCIENCE", @"NATURE", @"GEOGRAPHY", @"ART", @"LITERATURE", @"ZANY MISCELLANY", nil];
+  _categoriesArray = [NSMutableArray arrayWithObjects: @"FILM & TV", @"MUSIC", @"SPORTS", @"HISTORY", @"SCIENCE", @"GEOGRAPHY", @"THE ARTS", nil];
   
   NSInteger j = [_categoriesArray count];
   
-  NSLog(@"this round's array before: %lu", (unsigned long)_thisRoundsArray.count);
+  //randomize category selections. will always display 3 randomized options, plus DIY option.
   int remaining = 3;
   
   if (_categoriesArray.count >= remaining) {
     while (remaining > 0) {
-      NSInteger k = arc4random_uniform((u_int32_t)j) % 12;
+      NSInteger k = arc4random_uniform((u_int32_t)j) % 7;
       NSLog(@"k = %ld", (long)k);
       
       NSString *string = _categoriesArray[k];
@@ -111,7 +111,7 @@
   self.categoryPressed = _thisRoundsArray[1];
   NSLog(@"%@", self.categoryPressed);
   //[self selectArray:self.categoryPressed];
-  //self.selectedArray = _filmArray;
+  //self.selectedArray = _filmAndTVArray;
   //NSLog(@"ARRAY WAS>>> %@", self.selectedArray);
   [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
@@ -119,7 +119,7 @@
   self.categoryPressed = _thisRoundsArray[2];
   NSLog(@"%@", self.categoryPressed);
   //[self selectArray:self.categoryPressed];
-  //self.selectedArray = _filmArray;
+  //self.selectedArray = _filmAndTVArray;
   //NSLog(@"ARRAY WAS>>> %@", self.selectedArray);
   [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
