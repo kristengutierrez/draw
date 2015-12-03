@@ -47,15 +47,16 @@
                                     <action selector="doneButtonPressed:" destination="6jh-gQ-TMP" eventType="touchUpInside" id="biw-DN-0OH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vb-MG-1hG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vb-MG-1hG">
                                 <rect key="frame" x="8" y="8" width="69" height="69"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27.5" id="LWY-O6-xZM">
                                         <variation key="heightClass=compact" constant="30"/>
                                     </constraint>
+                                    <constraint firstAttribute="width" secondItem="4vb-MG-1hG" secondAttribute="height" multiplier="1:1" id="rfB-ry-lIu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -73,7 +74,7 @@
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Draw: [prompt goes here]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-ND-WL7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Draw: [prompt goes here]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-ND-WL7">
                                 <rect key="frame" x="85" y="25" width="449" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
@@ -88,12 +89,18 @@
                         <color key="backgroundColor" red="0.20000000000000001" green="0.26274509800000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4vb-MG-1hG" firstAttribute="height" secondItem="YJ0-HI-u58" secondAttribute="height" multiplier="0.6" id="7gk-z0-Qoa"/>
+                            <constraint firstItem="4vb-MG-1hG" firstAttribute="centerY" secondItem="YJ0-HI-u58" secondAttribute="centerY" id="8ul-KB-pSX"/>
+                            <constraint firstItem="W4f-ND-WL7" firstAttribute="leading" secondItem="4vb-MG-1hG" secondAttribute="trailing" constant="8" id="Dxv-NK-tzr"/>
                             <constraint firstItem="rSM-7x-KAD" firstAttribute="leading" secondItem="W4f-ND-WL7" secondAttribute="trailing" constant="8" id="FX2-8T-T7j"/>
                             <constraint firstItem="rSM-7x-KAD" firstAttribute="centerY" secondItem="YJ0-HI-u58" secondAttribute="centerY" id="Qq2-XV-vzz"/>
                             <constraint firstItem="rSM-7x-KAD" firstAttribute="height" secondItem="YJ0-HI-u58" secondAttribute="height" multiplier="0.6" constant="1" id="TKM-Qm-Gd4"/>
                             <constraint firstAttribute="trailing" secondItem="rSM-7x-KAD" secondAttribute="trailing" constant="8" id="Xqs-Uh-VTW"/>
                             <constraint firstAttribute="bottom" secondItem="rSM-7x-KAD" secondAttribute="bottom" constant="16" id="aoU-TJ-NdQ"/>
+                            <constraint firstItem="4vb-MG-1hG" firstAttribute="height" secondItem="YJ0-HI-u58" secondAttribute="height" multiplier="0.6" id="b4Q-ff-xRM"/>
+                            <constraint firstItem="rSM-7x-KAD" firstAttribute="leading" secondItem="W4f-ND-WL7" secondAttribute="trailing" constant="8" id="bVJ-b5-kyt"/>
+                            <constraint firstItem="W4f-ND-WL7" firstAttribute="centerY" secondItem="YJ0-HI-u58" secondAttribute="centerY" id="cUa-y4-f26"/>
                             <constraint firstAttribute="bottom" secondItem="rSM-7x-KAD" secondAttribute="bottom" constant="8" id="iB7-aQ-sC5"/>
+                            <constraint firstItem="4vb-MG-1hG" firstAttribute="leading" secondItem="YJ0-HI-u58" secondAttribute="leading" constant="8" id="l6x-0e-G9a"/>
                             <constraint firstAttribute="trailing" secondItem="rSM-7x-KAD" secondAttribute="trailing" constant="8" id="lUt-un-eun"/>
                             <constraint firstItem="rSM-7x-KAD" firstAttribute="top" secondItem="YJ0-HI-u58" secondAttribute="top" constant="8" id="mZS-Mj-LSo"/>
                         </constraints>
@@ -111,7 +118,7 @@
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-1Y-7kE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.79528810770000002" green="0.94302443520000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
                 <animations/>

@@ -145,7 +145,7 @@
                             </stackView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.13725490200000001" green="0.18039215689999999" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1529411765" green="0.20392156859999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zgz-ff-mbI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VE0-HO-dDm"/>
                             <constraint firstItem="zgz-ff-mbI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="n0U-1i-u40"/>
