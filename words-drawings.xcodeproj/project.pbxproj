@@ -256,17 +256,9 @@
 				17EBC0161BE452C800E9C83A /* Credits.storyboard */,
 				172D2A051BB1180C00120637 /* PassViewController.xib */,
 				3481D33E1BA7BF7400BFBCC5 /* wordsCell.xib */,
-				3488D26D1BB08A78007384FA /* WordsTableViewCell.h */,
-				3488D26E1BB08A78007384FA /* WordsTableViewCell.m */,
 				3481D3401BA7BF8500BFBCC5 /* drawingCell.xib */,
-				3488D2701BB08C5D007384FA /* DrawingTableViewCell.h */,
-				3488D2711BB08C5D007384FA /* DrawingTableViewCell.m */,
-				34A681F81BAF1C430053C9F0 /* BackgroundGradient.h */,
 				3EF50B371BB1BBE4007CCCD4 /* EndOfGameStoryboard.storyboard */,
 				347685D31BB4700D00C58742 /* souvenirCell.xib */,
-				347685D81BB476BC00C58742 /* SouvenirCollectionViewCell.h */,
-				347685D91BB476BC00C58742 /* SouvenirCollectionViewCell.m */,
-				34A681F91BAF1C430053C9F0 /* BackgroundGradient.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -298,6 +290,12 @@
 				347685DC1BB4A88300C58742 /* BetterInstructionsViewController.m */,
 				3E1B2D651BB210D800EF25B7 /* ExperimentalViewController.h */,
 				3E1B2D661BB210D800EF25B7 /* ExperimentalViewController.m */,
+				3488D26D1BB08A78007384FA /* WordsTableViewCell.h */,
+				3488D26E1BB08A78007384FA /* WordsTableViewCell.m */,
+				3488D2701BB08C5D007384FA /* DrawingTableViewCell.h */,
+				3488D2711BB08C5D007384FA /* DrawingTableViewCell.m */,
+				347685D81BB476BC00C58742 /* SouvenirCollectionViewCell.h */,
+				347685D91BB476BC00C58742 /* SouvenirCollectionViewCell.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +303,8 @@
 		348638771BA3C892001AA58D /* Discards */ = {
 			isa = PBXGroup;
 			children = (
+				34A681F81BAF1C430053C9F0 /* BackgroundGradient.h */,
+				34A681F91BAF1C430053C9F0 /* BackgroundGradient.m */,
 			);
 			name = Discards;
 			sourceTree = "<group>";
