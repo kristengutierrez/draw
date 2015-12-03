@@ -22,8 +22,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="337.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-1Y-7kE">
+                        <rect key="frame" x="0.0" y="121" width="600" height="216"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJ0-HI-u58">
-                        <rect key="frame" x="0.0" y="255" width="600" height="82.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="82.5"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSM-7x-KAD">
                                 <rect key="frame" x="531" y="8" width="61" height="61"/>
@@ -115,34 +120,25 @@
                             </mask>
                         </variation>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-1Y-7kE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="YJ0-HI-u58" secondAttribute="bottom" constant="-8" id="2aY-0J-ovc"/>
-                    <constraint firstItem="YJ0-HI-u58" firstAttribute="leading" secondItem="FQl-nB-aQb" secondAttribute="leadingMargin" constant="-8" id="8rw-D7-fGJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1pf-1Y-7kE" secondAttribute="bottom" constant="8" id="42P-AW-Xj0"/>
                     <constraint firstItem="1pf-1Y-7kE" firstAttribute="height" secondItem="FQl-nB-aQb" secondAttribute="height" multiplier="0.875" id="9kE-UB-Uac"/>
-                    <constraint firstItem="YJ0-HI-u58" firstAttribute="top" secondItem="1pf-1Y-7kE" secondAttribute="bottom" id="Fnu-1H-C9n"/>
-                    <constraint firstItem="YJ0-HI-u58" firstAttribute="top" secondItem="1pf-1Y-7kE" secondAttribute="bottom" constant="8" id="IDx-IO-KyB"/>
+                    <constraint firstItem="1pf-1Y-7kE" firstAttribute="top" secondItem="YJ0-HI-u58" secondAttribute="bottom" id="HHa-ba-q14"/>
                     <constraint firstItem="1pf-1Y-7kE" firstAttribute="leading" secondItem="FQl-nB-aQb" secondAttribute="leadingMargin" constant="-8" id="Jvn-ZA-ta4"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1pf-1Y-7kE" secondAttribute="trailing" constant="-8" id="MhF-cG-kyF"/>
-                    <constraint firstItem="YJ0-HI-u58" firstAttribute="height" secondItem="FQl-nB-aQb" secondAttribute="height" multiplier="0.125" id="SXI-Z6-YDz"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="YJ0-HI-u58" secondAttribute="trailing" constant="-8" id="bEU-2M-gBs"/>
-                    <constraint firstItem="YJ0-HI-u58" firstAttribute="top" secondItem="1pf-1Y-7kE" secondAttribute="bottom" constant="-19.5" id="qFy-fB-2YG"/>
+                    <constraint firstItem="YJ0-HI-u58" firstAttribute="leading" secondItem="FQl-nB-aQb" secondAttribute="leadingMargin" constant="-8" id="kAr-cy-vua"/>
+                    <constraint firstItem="YJ0-HI-u58" firstAttribute="top" secondItem="FQl-nB-aQb" secondAttribute="topMargin" constant="-8" id="npK-98-Hev"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YJ0-HI-u58" secondAttribute="trailing" constant="-8" id="oKU-9h-hJb"/>
                     <constraint firstItem="1pf-1Y-7kE" firstAttribute="top" secondItem="FQl-nB-aQb" secondAttribute="topMargin" constant="-8" id="tGI-ju-BjK"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="YJ0-HI-u58" secondAttribute="bottom" constant="-8" id="zAP-bd-beL"/>
+                    <constraint firstItem="YJ0-HI-u58" firstAttribute="height" secondItem="FQl-nB-aQb" secondAttribute="height" multiplier="0.125" id="za4-N1-azG"/>
                     <constraint firstAttribute="leading" secondItem="FQl-nB-aQb" secondAttribute="leadingMargin" constant="-8" id="zz0-3L-uSG"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="9kE-UB-Uac"/>
-                        <exclude reference="2aY-0J-ovc"/>
-                        <exclude reference="IDx-IO-KyB"/>
-                        <exclude reference="qFy-fB-2YG"/>
+                        <exclude reference="tGI-ju-BjK"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
