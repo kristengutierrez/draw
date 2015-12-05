@@ -38,7 +38,7 @@
     ScrollTableViewController *scrollTVC = (ScrollTableViewController *)[navController topViewController];
     [scrollTVC setNavController:navController];
 
-     scrollTVC.seedPrompt = self.stringToPass;
+     scrollTVC.initialPrompt = self.stringToPass;
     scrollTVC.numberOfPlayers = self.numberOfPlayers;
     scrollTVC.durationOfRound = self.durationOfRound;
   }

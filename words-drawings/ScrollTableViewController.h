@@ -14,7 +14,7 @@
 
 @property NSInteger numberOfPlayers;
 @property NSInteger durationOfRound;
-@property (strong,nonatomic) NSString *seedPrompt;
+@property (strong,nonatomic) NSString *initialPrompt;
 @property (weak, nonatomic) UINavigationController *navController;
 @property (strong, nonatomic) NSMutableArray *sketchGuesses;
 

@@ -20,7 +20,7 @@
 @interface ScrollTableViewController () <JotViewControllerDelegate, UITextFieldDelegate>
 
 @property (nonatomic) NSInteger numberOfRows;
-//@property (strong, nonatomic) NSString *seedPrompt;
+//@property (strong, nonatomic) NSString *initialPrompt;
 @property (strong, nonatomic) NSString *currentPrompt;
 @property (strong, nonatomic) NSMutableArray *promptArray;
 @property (strong, nonatomic) NSMutableArray *drawingArray;
@@ -45,10 +45,10 @@
   self.currentWordsCell.textField.delegate = self;
 
 //  self.currentWordsCell.textField.autocorrectionType = UITextAutocorrectionTypeNo;
-  NSLog(@"SEED PROMPT: %@", _seedPrompt);
+  NSLog(@"SEED PROMPT: %@", _initialPrompt);
   
   _promptArray = [[NSMutableArray alloc] init];
-  [_promptArray addObject: _seedPrompt];
+  [_promptArray addObject: _initialPrompt];
   
   _drawingArray = [[NSMutableArray alloc] init];
   
@@ -102,7 +102,7 @@
       SketchGuess *sketchGuess = [[SketchGuess alloc] init];
       sketchGuess.guess = [[Guess alloc] init];
       sketchGuess.sketch = [[Sketch alloc] init];
-      //sketchGuess.prompt = _seedPrompt;
+      //sketchGuess.prompt = _initialPrompt;
       [self.sketchGuesses addObject:sketchGuess];
     }
   } else {
@@ -188,13 +188,13 @@
       SketchGuess *previousSketchGuess = self.sketchGuesses[self.currentSketchGuessIndex - 1];
       cell.promptLabel.text = previousSketchGuess.guess.guessString;
     } else {
-      cell.promptLabel.text = _seedPrompt;
+      cell.promptLabel.text = _initialPrompt;
     }
     
     
     [self.jotVC didMoveToParentViewController:self];
     self.jotVC.view.frame = cell.drawingView.frame;
-    //    cell.promptLabel.text = _seedPrompt;
+    //    cell.promptLabel.text = _initialPrompt;
     cell.timerLabel.text = [NSString stringWithFormat:@"%ld",(long)_durationOfRound];
     return cell;
 

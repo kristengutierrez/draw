@@ -81,8 +81,8 @@
 		17EBC0161BE452C800E9C83A /* Credits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
 		17EBC0181BE9575D00E9C83A /* WordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsViewController.h; sourceTree = "<group>"; };
 		17EBC0191BE9575D00E9C83A /* WordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsViewController.m; sourceTree = "<group>"; };
-		342BE8271BA3D27D00700F02 /* ScrollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTableViewController.h; sourceTree = "<group>"; };
-		342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTableViewController.m; sourceTree = "<group>"; };
+		342BE8271BA3D27D00700F02 /* ScrollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ScrollTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ScrollTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3430FBE51BA3A00D007C108D /* words-drawings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "words-drawings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3430FBE91BA3A00D007C108D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3430FBEB1BA3A00D007C108D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		348638781BA3CBC0001AA58D /* SeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedViewController.h; sourceTree = "<group>"; };
 		348638791BA3CBC0001AA58D /* SeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedViewController.m; sourceTree = "<group>"; };
 		3486387B1BA3CC99001AA58D /* PassItOnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassItOnViewController.h; sourceTree = "<group>"; };
-		3486387C1BA3CC99001AA58D /* PassItOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassItOnViewController.m; sourceTree = "<group>"; };
+		3486387C1BA3CC99001AA58D /* PassItOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PassItOnViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		348667B31BAF499B002C5825 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		348667B41BAF499B002C5825 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		348667B61BAF6AFF002C5825 /* EndOfGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndOfGameViewController.h; sourceTree = "<group>"; };
@@ -255,18 +255,10 @@
 				3430FBF11BA3A00D007C108D /* Main.storyboard */,
 				17EBC0161BE452C800E9C83A /* Credits.storyboard */,
 				172D2A051BB1180C00120637 /* PassViewController.xib */,
-				3481D33E1BA7BF7400BFBCC5 /* wordsCell.xib */,
-				3488D26D1BB08A78007384FA /* WordsTableViewCell.h */,
-				3488D26E1BB08A78007384FA /* WordsTableViewCell.m */,
 				3481D3401BA7BF8500BFBCC5 /* drawingCell.xib */,
-				3488D2701BB08C5D007384FA /* DrawingTableViewCell.h */,
-				3488D2711BB08C5D007384FA /* DrawingTableViewCell.m */,
-				34A681F81BAF1C430053C9F0 /* BackgroundGradient.h */,
+				3481D33E1BA7BF7400BFBCC5 /* wordsCell.xib */,
 				3EF50B371BB1BBE4007CCCD4 /* EndOfGameStoryboard.storyboard */,
 				347685D31BB4700D00C58742 /* souvenirCell.xib */,
-				347685D81BB476BC00C58742 /* SouvenirCollectionViewCell.h */,
-				347685D91BB476BC00C58742 /* SouvenirCollectionViewCell.m */,
-				34A681F91BAF1C430053C9F0 /* BackgroundGradient.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -298,6 +290,12 @@
 				347685DC1BB4A88300C58742 /* BetterInstructionsViewController.m */,
 				3E1B2D651BB210D800EF25B7 /* ExperimentalViewController.h */,
 				3E1B2D661BB210D800EF25B7 /* ExperimentalViewController.m */,
+				3488D26D1BB08A78007384FA /* WordsTableViewCell.h */,
+				3488D26E1BB08A78007384FA /* WordsTableViewCell.m */,
+				3488D2701BB08C5D007384FA /* DrawingTableViewCell.h */,
+				3488D2711BB08C5D007384FA /* DrawingTableViewCell.m */,
+				347685D81BB476BC00C58742 /* SouvenirCollectionViewCell.h */,
+				347685D91BB476BC00C58742 /* SouvenirCollectionViewCell.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +303,8 @@
 		348638771BA3C892001AA58D /* Discards */ = {
 			isa = PBXGroup;
 			children = (
+				34A681F81BAF1C430053C9F0 /* BackgroundGradient.h */,
+				34A681F91BAF1C430053C9F0 /* BackgroundGradient.m */,
 			);
 			name = Discards;
 			sourceTree = "<group>";
