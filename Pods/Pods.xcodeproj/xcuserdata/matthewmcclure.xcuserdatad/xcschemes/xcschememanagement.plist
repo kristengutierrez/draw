@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>DHSmartScreenshot.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PPSSignatureView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>jot.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1E8C185BB5DF9D87527306FD22FAF081</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>237524EF8C7E4ED31D10F4BCE5ABAD38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>316AC0A1E55006B94E0756A6CB9571B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59239F97C1A890AEEA6FACD9E9AD3301</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98D792EA13D2F888041E09588E2D78EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
