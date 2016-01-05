@@ -89,10 +89,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Describe the image below" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-Rd-oH9">
-                                        <rect key="frame" x="104" y="35" width="391" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Tap here to describe the image" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-Rd-oH9">
+                                        <rect key="frame" x="104" y="35" width="391" height="33"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
