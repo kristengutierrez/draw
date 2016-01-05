@@ -32,8 +32,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-9X-BaA">
-                                <rect key="frame" x="0.0" y="62" width="600" height="476"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-9X-BaA">
+                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
                                 <color key="backgroundColor" red="0.45394691139999999" green="1" blue="0.89364850500000004" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62H-bA-Itr">
@@ -127,11 +127,15 @@
                             <constraint firstItem="MJe-Ch-325" firstAttribute="top" secondItem="62H-bA-Itr" secondAttribute="bottom" id="4j6-ZP-Cr7"/>
                             <constraint firstItem="62H-bA-Itr" firstAttribute="top" secondItem="VKt-4H-9Dz" secondAttribute="bottom" id="Cmq-nm-JLL"/>
                             <constraint firstItem="MJe-Ch-325" firstAttribute="height" secondItem="TZT-JL-7fT" secondAttribute="height" multiplier="0.8" id="MrL-Pa-fNR"/>
+                            <constraint firstItem="XFN-9X-BaA" firstAttribute="height" secondItem="TZT-JL-7fT" secondAttribute="height" multiplier="0.8" id="Nb2-Ea-R2s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="62H-bA-Itr" secondAttribute="trailing" constant="-20" id="Xd3-AS-tKX"/>
                             <constraint firstItem="62H-bA-Itr" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="YiY-XY-pD7"/>
                             <constraint firstItem="wvY-LR-kXa" firstAttribute="top" secondItem="MJe-Ch-325" secondAttribute="bottom" id="ddo-av-vOf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MJe-Ch-325" secondAttribute="trailing" constant="-20" id="nwR-bv-Y1y"/>
+                            <constraint firstItem="wvY-LR-kXa" firstAttribute="top" secondItem="XFN-9X-BaA" secondAttribute="bottom" id="oUw-CO-WDN"/>
                             <constraint firstItem="MJe-Ch-325" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="oih-lG-lpC"/>
+                            <constraint firstItem="XFN-9X-BaA" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="pGZ-wj-Tg6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XFN-9X-BaA" secondAttribute="trailing" constant="-20" id="pUX-6w-wDe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
