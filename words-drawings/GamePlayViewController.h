@@ -10,4 +10,6 @@
 
 @interface GamePlayViewController : UIViewController
 
+@property (strong, nonatomic) NSString *firstPrompt;
+
 @end

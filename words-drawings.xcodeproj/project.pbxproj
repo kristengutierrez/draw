@@ -240,8 +240,6 @@
 		3430FC1E1BA3A043007C108D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				294B7A341C3B712E00F61142 /* GamePlayViewController.h */,
-				294B7A351C3B712E00F61142 /* GamePlayViewController.m */,
 				3EF50B341BB0CAE7007CCCD4 /* UIViewToPDF.h */,
 				3EF50B351BB0CAE7007CCCD4 /* UIViewToPDF.m */,
 				3EF50B261BB074EE007CCCD4 /* FacebookLogin.h */,
@@ -280,6 +278,8 @@
 			children = (
 				3430FC211BA3A07C007C108D /* MainViewController.h */,
 				3430FC221BA3A07C007C108D /* MainViewController.m */,
+				294B7A341C3B712E00F61142 /* GamePlayViewController.h */,
+				294B7A351C3B712E00F61142 /* GamePlayViewController.m */,
 				17EBC0181BE9575D00E9C83A /* WordsViewController.h */,
 				17EBC0191BE9575D00E9C83A /* WordsViewController.m */,
 				3486387B1BA3CC99001AA58D /* PassItOnViewController.h */,
