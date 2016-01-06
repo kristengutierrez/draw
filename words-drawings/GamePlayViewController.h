@@ -11,5 +11,6 @@
 @interface GamePlayViewController : UIViewController
 
 @property (strong, nonatomic) NSString *firstPrompt;
+@property NSInteger totalNumberOfRounds;
 
 @end

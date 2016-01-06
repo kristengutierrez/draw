@@ -187,11 +187,60 @@
                         <outlet property="sketchImageView" destination="XFN-9X-BaA" id="z7o-BK-U6S"/>
                         <outlet property="textBoxLabel" destination="v16-BL-wqe" id="0Cu-b9-lFP"/>
                         <outlet property="timerLabel" destination="mHu-e4-C2l" id="PBN-Uu-mCT"/>
+                        <segue destination="Hle-U0-Eep" kind="show" identifier="goToEndGame" id="xVr-rr-BeY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IF-dC-B5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="311"/>
+            <point key="canvasLocation" x="519" y="236"/>
+        </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="eLd-8E-NEj">
+            <objects>
+                <viewController id="Hle-U0-Eep" customClass="EndGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pgq-K5-BsW"/>
+                        <viewControllerLayoutGuide type="bottom" id="06O-Y8-gza"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJr-RP-an8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CwZ-8V-dAb">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVe-vh-XYM">
+                                        <rect key="frame" x="203" y="271" width="194" height="30"/>
+                                        <state key="normal" title="click to view game summary"/>
+                                        <connections>
+                                            <action selector="clickToViewGameSummary:" destination="Hle-U0-Eep" eventType="touchUpInside" id="QcS-YW-E75"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82111561089999996" green="1" blue="0.35459722760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MVe-vh-XYM" firstAttribute="centerX" secondItem="CwZ-8V-dAb" secondAttribute="centerX" id="1lK-D1-IxU"/>
+                                    <constraint firstItem="MVe-vh-XYM" firstAttribute="centerY" secondItem="CwZ-8V-dAb" secondAttribute="centerY" id="DT8-av-WF0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61450654489439605" green="0.65614430660994261" blue="0.76881009615384621" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CwZ-8V-dAb" firstAttribute="top" secondItem="iJr-RP-an8" secondAttribute="topMargin" id="K63-tI-f3G"/>
+                            <constraint firstItem="CwZ-8V-dAb" firstAttribute="height" secondItem="iJr-RP-an8" secondAttribute="height" id="U6G-jq-gKL"/>
+                            <constraint firstItem="CwZ-8V-dAb" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="e5y-9W-jJ8"/>
+                            <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="CwZ-8V-dAb" secondAttribute="bottom" id="pLb-cH-Odg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CwZ-8V-dAb" secondAttribute="trailing" constant="-20" id="zSh-zJ-BsP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="curtainTopConstraint" destination="K63-tI-f3G" id="7rM-w9-zea"/>
+                        <outlet property="curtainView" destination="CwZ-8V-dAb" id="ptl-bD-ae7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVv-kV-TFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="311"/>
         </scene>
     </scenes>
 </document>

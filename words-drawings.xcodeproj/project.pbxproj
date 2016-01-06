@@ -19,6 +19,7 @@
 		17EBC01A1BE9575D00E9C83A /* WordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EBC0191BE9575D00E9C83A /* WordsViewController.m */; };
 		294B7A331C3B6C2300F61142 /* GamePlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294B7A321C3B6C2300F61142 /* GamePlay.storyboard */; };
 		294B7A361C3B712E00F61142 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294B7A351C3B712E00F61142 /* GamePlayViewController.m */; };
+		298643601C3CD5F800D0F12B /* EndGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2986435F1C3CD5F800D0F12B /* EndGameViewController.m */; };
 		342BE8291BA3D27D00700F02 /* ScrollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */; };
 		3430FBEA1BA3A00D007C108D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3430FBE91BA3A00D007C108D /* main.m */; };
 		3430FBED1BA3A00D007C108D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3430FBEC1BA3A00D007C108D /* AppDelegate.m */; };
@@ -86,6 +87,8 @@
 		294B7A321C3B6C2300F61142 /* GamePlay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamePlay.storyboard; sourceTree = "<group>"; };
 		294B7A341C3B712E00F61142 /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayViewController.h; sourceTree = "<group>"; };
 		294B7A351C3B712E00F61142 /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
+		2986435E1C3CD5F800D0F12B /* EndGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameViewController.h; sourceTree = "<group>"; };
+		2986435F1C3CD5F800D0F12B /* EndGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndGameViewController.m; sourceTree = "<group>"; };
 		342BE8271BA3D27D00700F02 /* ScrollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTableViewController.h; sourceTree = "<group>"; };
 		342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTableViewController.m; sourceTree = "<group>"; };
 		3430FBE51BA3A00D007C108D /* words-drawings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "words-drawings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +298,8 @@
 				348638781BA3CBC0001AA58D /* SeedViewController.h */,
 				348638791BA3CBC0001AA58D /* SeedViewController.m */,
 				342BE8271BA3D27D00700F02 /* ScrollTableViewController.h */,
+				2986435E1C3CD5F800D0F12B /* EndGameViewController.h */,
+				2986435F1C3CD5F800D0F12B /* EndGameViewController.m */,
 				342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */,
 				348667B61BAF6AFF002C5825 /* EndOfGameViewController.h */,
 				348667B71BAF6AFF002C5825 /* EndOfGameViewController.m */,
@@ -515,6 +520,7 @@
 				34A681FD1BAF267F0053C9F0 /* ChooseCategoryViewController.m in Sources */,
 				3488D26F1BB08A78007384FA /* WordsTableViewCell.m in Sources */,
 				348667B51BAF499B002C5825 /* SettingsViewController.m in Sources */,
+				298643601C3CD5F800D0F12B /* EndGameViewController.m in Sources */,
 				347685DA1BB476BC00C58742 /* SouvenirCollectionViewCell.m in Sources */,
 				347685DD1BB4A88300C58742 /* BetterInstructionsViewController.m in Sources */,
 				172D2A091BB123AB00120637 /* PassViewController.m in Sources */,

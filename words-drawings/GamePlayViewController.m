@@ -8,6 +8,7 @@
 
 #import "GamePlayViewController.h"
 #import "SketchGuess.h"
+#import "EndGameViewController.h"
 
 @interface GamePlayViewController ()
 
@@ -34,6 +35,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //remove later
+    self.totalNumberOfRounds = 3;
+    
     self.roundCount = 0;
     self.passItOnViewTopConstraint.constant = -1000;
     
@@ -85,42 +90,44 @@
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
     
-    
-    
-    if (self.roundCount % 2 == 0) {
-        //if in a drawing round
+    if (self.roundCount < self.totalNumberOfRounds - 1) {
+        if (self.roundCount % 2 == 0) {
+            //if in a drawing round
+            
+            //save what is in the drawing pad uiview as a uiimage
+            //but for now just save this
+            UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
+            
+            self.currentSketchGuess.sketchReplacementProperty = savedImage;
+            [self.sketchGuessArray addObject:self.currentSketchGuess];
+            NSLog(@"array count: %lu", (unsigned long)self.sketchGuessArray.count);
+            
+            self.sketchImageView.image = self.currentSketchGuess.sketchReplacementProperty;
+            
+        } else {
+            
+            //if in a guessing round
+            [self viewDidAppear:true];
+            
+            self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
+            self.textBoxLabel.text = self.imageDescriptionTextField.text;
+            self.imageDescriptionTextField.text = @"";
+        }
         
-        //save what is in the drawing pad uiview as a uiimage
-        //but for now just save this
-        UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
         
-        self.currentSketchGuess.sketchReplacementProperty = savedImage;
-        [self.sketchGuessArray addObject:self.currentSketchGuess];
-        NSLog(@"array count: %lu", (unsigned long)self.sketchGuessArray.count);
-        
-        self.sketchImageView.image = self.currentSketchGuess.sketchReplacementProperty;
-
+        [UIView animateWithDuration:0.6 animations:^{
+            self.passItOnViewTopConstraint.constant = 0;
+            [self.passItOnView layoutIfNeeded];
+        } completion:^(BOOL finished){
+            
+            self.roundCount++;
+            [self toggleRoundInterface];
+            
+        }];
     } else {
-
-        //if in a guessing round
-        [self viewDidAppear:true];
-        
-        self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
-        self.textBoxLabel.text = self.imageDescriptionTextField.text;
-        self.imageDescriptionTextField.text = @"";
+        [self performSegueWithIdentifier:@"goToEndGame" sender:nil];
     }
-    
-    
-    [UIView animateWithDuration:0.6 animations:^{
-        self.passItOnViewTopConstraint.constant = 0;
-        [self.passItOnView layoutIfNeeded];
-    } completion:^(BOOL finished){
-        
-        self.roundCount++;
-        [self toggleRoundInterface];
-        
-    }];
-    
+  
     
 }
 
@@ -131,6 +138,15 @@
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+     if ([segue.identifier  isEqual: @"goToEndOfGame"]) {
+         //
+        EndGameViewController *endGameVC = (EndGameViewController *)[segue destinationViewController];
+         endGameVC.totalNumberOfRounds = self.totalNumberOfRounds;
+         
+         //need way to pass array
+         endGameVC.finalArrayOfSketchGuesses = [[NSMutableArray alloc] init];
+         endGameVC.finalArrayOfSketchGuesses = self.sketchGuessArray;
+     }
      
  }
  
