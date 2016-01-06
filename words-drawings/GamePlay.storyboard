@@ -120,32 +120,70 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Den-0F-dUr">
+                                <rect key="frame" x="0.0" y="34" width="600" height="533"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o72-zk-aBp">
+                                        <rect key="frame" x="230" y="250" width="140" height="51"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="next player ready?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-FS-XZ3">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u9-a1-u2T">
+                                                <rect key="frame" x="50" y="21" width="39" height="30"/>
+                                                <state key="normal" title="begin"/>
+                                                <connections>
+                                                    <action selector="hidePassItOnView:" destination="C56-r5-vlf" eventType="touchUpInside" id="1wP-jR-D5a"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="o72-zk-aBp" firstAttribute="centerY" secondItem="Den-0F-dUr" secondAttribute="centerY" id="93c-10-DrD"/>
+                                    <constraint firstItem="o72-zk-aBp" firstAttribute="centerX" secondItem="Den-0F-dUr" secondAttribute="centerX" id="rBS-iO-r2X"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Den-0F-dUr" firstAttribute="top" secondItem="VKt-4H-9Dz" secondAttribute="bottom" id="1lH-wO-IAq"/>
                             <constraint firstItem="62H-bA-Itr" firstAttribute="top" secondItem="TZT-JL-7fT" secondAttribute="topMargin" id="4di-HL-JHt"/>
                             <constraint firstItem="MJe-Ch-325" firstAttribute="top" secondItem="62H-bA-Itr" secondAttribute="bottom" id="4j6-ZP-Cr7"/>
+                            <constraint firstItem="Den-0F-dUr" firstAttribute="top" secondItem="VKt-4H-9Dz" secondAttribute="bottom" constant="14" id="6XX-wi-gTb"/>
                             <constraint firstItem="62H-bA-Itr" firstAttribute="top" secondItem="VKt-4H-9Dz" secondAttribute="bottom" id="Cmq-nm-JLL"/>
+                            <constraint firstItem="Den-0F-dUr" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="H9X-ib-lIC"/>
                             <constraint firstItem="MJe-Ch-325" firstAttribute="height" secondItem="TZT-JL-7fT" secondAttribute="height" multiplier="0.8" id="MrL-Pa-fNR"/>
                             <constraint firstItem="XFN-9X-BaA" firstAttribute="height" secondItem="TZT-JL-7fT" secondAttribute="height" multiplier="0.8" id="Nb2-Ea-R2s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="62H-bA-Itr" secondAttribute="trailing" constant="-20" id="Xd3-AS-tKX"/>
                             <constraint firstItem="62H-bA-Itr" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="YiY-XY-pD7"/>
                             <constraint firstItem="wvY-LR-kXa" firstAttribute="top" secondItem="MJe-Ch-325" secondAttribute="bottom" id="ddo-av-vOf"/>
+                            <constraint firstItem="Den-0F-dUr" firstAttribute="height" secondItem="TZT-JL-7fT" secondAttribute="height" id="eI5-z6-qqJ"/>
+                            <constraint firstItem="wvY-LR-kXa" firstAttribute="top" secondItem="Den-0F-dUr" secondAttribute="bottom" id="iWq-8f-mRn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MJe-Ch-325" secondAttribute="trailing" constant="-20" id="nwR-bv-Y1y"/>
                             <constraint firstItem="wvY-LR-kXa" firstAttribute="top" secondItem="XFN-9X-BaA" secondAttribute="bottom" id="oUw-CO-WDN"/>
                             <constraint firstItem="MJe-Ch-325" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="oih-lG-lpC"/>
                             <constraint firstItem="XFN-9X-BaA" firstAttribute="leading" secondItem="TZT-JL-7fT" secondAttribute="leadingMargin" constant="-20" id="pGZ-wj-Tg6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XFN-9X-BaA" secondAttribute="trailing" constant="-20" id="pUX-6w-wDe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Den-0F-dUr" secondAttribute="trailing" constant="-20" id="rYP-Qm-eCw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="4di-HL-JHt"/>
+                                <exclude reference="1lH-wO-IAq"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="drawingPadView" destination="MJe-Ch-325" id="Sxb-uJ-U4q"/>
                         <outlet property="imageDescriptionTextField" destination="kLU-Rd-oH9" id="dJe-Y7-Zql"/>
+                        <outlet property="passItOnView" destination="Den-0F-dUr" id="yJe-SM-QPZ"/>
+                        <outlet property="passItOnViewBottomConstraint" destination="iWq-8f-mRn" id="g4y-WY-uAO"/>
+                        <outlet property="passItOnViewTopConstraint" destination="6XX-wi-gTb" id="DyA-GE-6B4"/>
                         <outlet property="sketchImageView" destination="XFN-9X-BaA" id="z7o-BK-U6S"/>
                         <outlet property="textBoxLabel" destination="v16-BL-wqe" id="0Cu-b9-lFP"/>
                         <outlet property="timerLabel" destination="mHu-e4-C2l" id="PBN-Uu-mCT"/>

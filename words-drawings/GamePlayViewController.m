@@ -11,6 +11,13 @@
 
 @interface GamePlayViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *passItOnView;
+- (IBAction)hidePassItOnView:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *passItOnViewTopConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *passItOnViewBottomConstraint;
+
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *textBoxLabel;
 @property (weak, nonatomic) IBOutlet UITextField *imageDescriptionTextField;
@@ -27,7 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.roundCount = 1;
+    self.roundCount = 0;
+    self.passItOnViewTopConstraint.constant = -1000;
     
     //create first SketchGuess instance and set guess string to first prompt
     self.currentSketchGuess = [[SketchGuess alloc] init];
@@ -48,17 +56,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    if (self.roundCount > 1) {
-        if (self.roundCount % 2 == 0) {
-            
-            // the crash lies here somewhere, above or below
-            
-//            SketchGuess *previousSketchGuess = [self.sketchGuessArray objectAtIndex:self.roundCount - 2];
-//            self.sketchImageView.image = previousSketchGuess.sketchReplacementProperty;
-        }
-      
-        
-    }
+
     
 }
 
@@ -69,57 +67,80 @@
 
 - (void)toggleRoundInterface {
     if (self.roundCount % 2 == 0) {
-        //if in a guessing round, hide drawing tools
-        self.textBoxLabel.hidden = YES;
-        self.imageDescriptionTextField.hidden = NO;
-        self.sketchImageView.hidden = NO;
-        self.drawingPadView.hidden = YES;
-    } else {
         //if in a drawing round, hide guessing tools
         self.textBoxLabel.hidden = NO;
         self.imageDescriptionTextField.hidden = YES;
         self.sketchImageView.hidden = YES;
         self.drawingPadView.hidden = NO;
+    } else {
+        
+        
+        //if in a guessing round, hide drawing tools
+        self.textBoxLabel.hidden = YES;
+        self.imageDescriptionTextField.hidden = NO;
+        self.sketchImageView.hidden = NO;
+        self.drawingPadView.hidden = YES;
     }
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)doneButtonPressed:(UIButton *)sender {
     
+    
+    
     if (self.roundCount % 2 == 0) {
+        //if in a drawing round
+        
+        //save what is in the drawing pad uiview as a uiimage
+        //but for now just save this
+        UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
+        
+        self.currentSketchGuess.sketchReplacementProperty = savedImage;
+        [self.sketchGuessArray addObject:self.currentSketchGuess];
+        NSLog(@"array count: %lu", (unsigned long)self.sketchGuessArray.count);
+        
+        self.sketchImageView.image = self.currentSketchGuess.sketchReplacementProperty;
+
+    } else {
+
         //if in a guessing round
         [self viewDidAppear:true];
         
         self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
         self.textBoxLabel.text = self.imageDescriptionTextField.text;
         self.imageDescriptionTextField.text = @"";
-        
-    } else {
-        //if in a drawing round
-        
-        //save what is in the drawing pad uiview as a uiimage
-        //but for now just save this
-        UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
-        self.currentSketchGuess.sketchReplacementProperty = savedImage;
-//
-//        //current sketchguess instance complete; add it to array
-        NSLog(@"current guess: %@", self.currentSketchGuess.guessReplacementProperty);
-        [self.sketchGuessArray addObject:self.currentSketchGuess];
-//
-        NSLog(@"array count: %lu", (unsigned long)self.sketchGuessArray.count);
     }
     
-    self.roundCount++;
-    [self toggleRoundInterface];
+    
+    [UIView animateWithDuration:0.6 animations:^{
+        self.passItOnViewTopConstraint.constant = 0;
+        [self.passItOnView layoutIfNeeded];
+    } completion:^(BOOL finished){
+        
+        self.roundCount++;
+        [self toggleRoundInterface];
+        
+    }];
+    
+    
+}
+
+
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+     
+ }
+ 
+
+- (IBAction)hidePassItOnView:(UIButton *)sender {
+    
+    [UIView animateWithDuration:0.6 animations:^{
+        self.passItOnViewTopConstraint.constant = -1000;
+        [self.passItOnView layoutIfNeeded];
+    }];
+    
 }
 @end
