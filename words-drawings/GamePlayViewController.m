@@ -26,8 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIView *drawingPadView;
 @property (weak, nonatomic) IBOutlet UIImageView *sketchImageView;
 @property NSInteger roundCount;
-@property NSMutableArray *sketchGuessArray;
-@property SketchGuess *currentSketchGuess;
+@property NSMutableArray *arrayOfSketchesAndGuesses;
+//@property SketchGuess *currentSketchGuess;
 
 @end
 
@@ -43,14 +43,16 @@
     self.passItOnViewTopConstraint.constant = -1000;
     
     //create first SketchGuess instance and set guess string to first prompt
-    self.currentSketchGuess = [[SketchGuess alloc] init];
+//    self.currentSketchGuess = [[SketchGuess alloc] init];
     
     
-    self.sketchGuessArray = [[NSMutableArray alloc] init];
+    self.arrayOfSketchesAndGuesses = [[NSMutableArray alloc] init];
     
     //set this for now, later it will come from other vc
     self.firstPrompt = @"this is the first prompt";
-    self.currentSketchGuess.guessReplacementProperty = self.firstPrompt;
+//    self.currentSketchGuess.guessReplacementProperty = self.firstPrompt;
+    
+    [self.arrayOfSketchesAndGuesses addObject:self.firstPrompt];
     
     //set label to firstprompt
     self.textBoxLabel.text = self.firstPrompt;
@@ -98,18 +100,18 @@
             //but for now just save this
             UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
             
-            self.currentSketchGuess.sketchReplacementProperty = savedImage;
-            [self.sketchGuessArray addObject:self.currentSketchGuess];
+//            self.currentSketchGuess.sketchReplacementProperty = savedImage;
+            [self.sketchGuessArray addObject:savedImage];
             NSLog(@"array count: %lu", (unsigned long)self.sketchGuessArray.count);
             
-            self.sketchImageView.image = self.currentSketchGuess.sketchReplacementProperty;
+            self.sketchImageView.image = savedImage;
             
         } else {
             
             //if in a guessing round
             [self viewDidAppear:true];
             
-            self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
+//            self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
             self.textBoxLabel.text = self.imageDescriptionTextField.text;
             self.imageDescriptionTextField.text = @"";
         }
@@ -138,7 +140,7 @@
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
-     if ([segue.identifier  isEqual: @"goToEndOfGame"]) {
+     if ([segue.identifier  isEqual: @"goToEndGame"]) {
          //
         EndGameViewController *endGameVC = (EndGameViewController *)[segue destinationViewController];
          endGameVC.totalNumberOfRounds = self.totalNumberOfRounds;
@@ -146,6 +148,7 @@
          //need way to pass array
          endGameVC.finalArrayOfSketchGuesses = [[NSMutableArray alloc] init];
          endGameVC.finalArrayOfSketchGuesses = self.sketchGuessArray;
+         NSLog(@"this is array count in prepareforseg: %lu", (unsigned long)self.sketchGuessArray.count);
      }
      
  }

@@ -248,11 +248,11 @@
 				3EF50B261BB074EE007CCCD4 /* FacebookLogin.h */,
 				3EF50B271BB074EE007CCCD4 /* FacebookLogin.m */,
 				175DDE4F1BB4654600CAE642 /* Sketch.h */,
+				175DDE501BB4654600CAE642 /* Sketch.m */,
 				175DDE521BB465EC00CAE642 /* Guess.h */,
 				175DDE551BB4662F00CAE642 /* SketchGuess.h */,
 				175DDE561BB4662F00CAE642 /* SketchGuess.m */,
 				175DDE531BB465EC00CAE642 /* Guess.m */,
-				175DDE501BB4654600CAE642 /* Sketch.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

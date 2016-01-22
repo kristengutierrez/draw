@@ -23,8 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSLog(@"total num of sketchguesses: %lu", self.finalArrayOfSketchGuesses.count);
+
 }
 
 - (void)didReceiveMemoryWarning {
