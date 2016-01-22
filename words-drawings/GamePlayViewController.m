@@ -37,7 +37,7 @@
     [super viewDidLoad];
     
     //remove later
-    self.totalNumberOfRounds = 3;
+    self.totalNumberOfRounds = 5;
     
     self.roundCount = 0;
     self.passItOnViewTopConstraint.constant = -1000;
@@ -50,6 +50,7 @@
     
     //set this for now, later it will come from other vc
     self.firstPrompt = @"this is the first prompt";
+    
 //    self.currentSketchGuess.guessReplacementProperty = self.firstPrompt;
     
     [self.arrayOfSketchesAndGuesses addObject:self.firstPrompt];
@@ -101,8 +102,9 @@
             UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
             
 //            self.currentSketchGuess.sketchReplacementProperty = savedImage;
-            [self.sketchGuessArray addObject:savedImage];
-            NSLog(@"array count: %lu", (unsigned long)self.sketchGuessArray.count);
+            
+            [self.arrayOfSketchesAndGuesses addObject:savedImage];
+            NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
             
             self.sketchImageView.image = savedImage;
             
@@ -112,6 +114,10 @@
             [self viewDidAppear:true];
             
 //            self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
+            
+            NSString *guess = self.imageDescriptionTextField.text;
+            [self.arrayOfSketchesAndGuesses addObject:guess];
+            
             self.textBoxLabel.text = self.imageDescriptionTextField.text;
             self.imageDescriptionTextField.text = @"";
         }
@@ -138,8 +144,7 @@
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+
      if ([segue.identifier  isEqual: @"goToEndGame"]) {
          //
         EndGameViewController *endGameVC = (EndGameViewController *)[segue destinationViewController];
@@ -147,8 +152,8 @@
          
          //need way to pass array
          endGameVC.finalArrayOfSketchGuesses = [[NSMutableArray alloc] init];
-         endGameVC.finalArrayOfSketchGuesses = self.sketchGuessArray;
-         NSLog(@"this is array count in prepareforseg: %lu", (unsigned long)self.sketchGuessArray.count);
+         endGameVC.finalArrayOfSketchGuesses = self.arrayOfSketchesAndGuesses;
+         NSLog(@"this is array count in prepareforseg: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
      }
      
  }

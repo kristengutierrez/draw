@@ -23,6 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    for (int i = 0; i < self.finalArrayOfSketchGuesses.count; i++) {
+        if (i % 2 == 0) {
+            NSLog(@"string: %@", self.finalArrayOfSketchGuesses[i]);
+        }
+    }
 
 }
 
