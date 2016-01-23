@@ -9,13 +9,15 @@
 #import "GamePlayViewController.h"
 #import "SketchGuess.h"
 #import "EndGameViewController.h"
+#import "JotViewController.h"
+
 
 @interface GamePlayViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *passItOnView;
 - (IBAction)hidePassItOnView:(UIButton *)sender;
 
-
+@property (nonatomic, strong) JotViewController *jotVC;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passItOnViewTopConstraint;
 
@@ -37,7 +39,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.sketchImageView.hidden = YES;
+    
     self.imageDescriptionTextField.delegate = self;
+    
+    self.jotVC = [[JotViewController alloc] init];
+    self.jotVC.delegate = self;
+    self.jotVC.state = JotViewStateDrawing;
+    [self addChildViewController:self.jotVC];
+    [self.drawingPadView addSubview:self.jotVC.view];
+    
+//    [cell setNeedsLayout];
+//    [cell layoutIfNeeded];
     
     //remove later
     self.totalNumberOfRounds = 4;
@@ -103,7 +117,8 @@
             
             //save what is in the drawing pad uiview as a uiimage
             //but for now just save this
-            UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
+            UIImage *savedImage = [self.jotVC renderImageWithScale:2.f onColor:self.view.backgroundColor];
+            [self.jotVC clearAll];
             
             [self.arrayOfSketchesAndGuesses addObject:savedImage];
             NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);

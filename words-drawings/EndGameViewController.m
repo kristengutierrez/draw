@@ -11,7 +11,9 @@
 
 @interface EndGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
+- (IBAction)viewSlideshow:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UIView *curtain;
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *curtainTopConstraint;
@@ -30,6 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.curtain.hidden = NO;
+    
     for (int i = 0; i < self.finalArrayOfSketchGuesses.count; i++) {
         if (i % 2 == 0) {
             NSLog(@"string: %@", self.finalArrayOfSketchGuesses[i]);
@@ -100,5 +105,9 @@
         [self.curtainView layoutIfNeeded];
     }];
     
+}
+
+- (IBAction)viewSlideshow:(UIButton *)sender {
+    self.curtain.hidden = YES;
 }
 @end
