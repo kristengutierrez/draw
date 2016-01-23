@@ -249,15 +249,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxs-ti-mJz">
-                                <rect key="frame" x="281" y="562" width="39" height="30"/>
-                                <state key="normal" title="home"/>
-                            </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFZ-ac-d45">
-                                <rect key="frame" x="0.0" y="79" width="600" height="521"/>
+                                <rect key="frame" x="0.0" y="79" width="600" height="400"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luw-LQ-Dj3">
                                         <rect key="frame" x="248" y="206" width="104" height="30"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="view slideshow"/>
                                         <connections>
                                             <action selector="viewSlideshow:" destination="Hle-U0-Eep" eventType="touchUpInside" id="xvl-ep-XsJ"/>
@@ -270,17 +267,25 @@
                                     <constraint firstItem="luw-LQ-Dj3" firstAttribute="centerY" secondItem="aFZ-ac-d45" secondAttribute="centerY" id="p1T-VK-2Hp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxs-ti-mJz">
+                                <rect key="frame" x="236" y="550" width="129" height="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
+                                <state key="normal" title="home"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="wKp-1n-wI1" secondAttribute="trailing" constant="-20" id="1pR-Ra-b4e"/>
+                            <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="Hxs-ti-mJz" secondAttribute="bottom" constant="20" id="AdR-yX-oU3"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="Ai7-QB-clx"/>
                             <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="Hxs-ti-mJz" secondAttribute="bottom" constant="8" id="CNY-Lg-l5D"/>
+                            <constraint firstItem="Hxs-ti-mJz" firstAttribute="centerY" secondItem="iJr-RP-an8" secondAttribute="centerY" id="G6h-L9-uMP"/>
                             <constraint firstItem="CwZ-8V-dAb" firstAttribute="top" secondItem="iJr-RP-an8" secondAttribute="topMargin" id="K63-tI-f3G"/>
                             <constraint firstItem="Hxs-ti-mJz" firstAttribute="centerX" secondItem="iJr-RP-an8" secondAttribute="centerX" id="NAJ-BW-bOm"/>
                             <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="aFZ-ac-d45" secondAttribute="bottom" id="OfR-GR-Dz3"/>
                             <constraint firstItem="xgn-9a-U0F" firstAttribute="trailing" secondItem="iJr-RP-an8" secondAttribute="trailingMargin" id="Rjx-PS-32I"/>
                             <constraint firstItem="CwZ-8V-dAb" firstAttribute="height" secondItem="iJr-RP-an8" secondAttribute="height" id="U6G-jq-gKL"/>
+                            <constraint firstItem="Hxs-ti-mJz" firstAttribute="top" secondItem="aFZ-ac-d45" secondAttribute="bottom" constant="8" id="XU3-uN-9js"/>
                             <constraint firstItem="xgn-9a-U0F" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" id="YUX-o7-SJ5"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="centerY" secondItem="iJr-RP-an8" secondAttribute="centerY" id="ZN8-yK-2hE"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="centerX" secondItem="iJr-RP-an8" secondAttribute="centerX" id="aK7-v1-h5V"/>
@@ -293,6 +298,13 @@
                             <constraint firstItem="aFZ-ac-d45" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="yOf-8b-69B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CwZ-8V-dAb" secondAttribute="trailing" constant="-20" id="zSh-zJ-BsP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G6h-L9-uMP"/>
+                                <exclude reference="XU3-uN-9js"/>
+                                <exclude reference="CNY-Lg-l5D"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="curtain" destination="aFZ-ac-d45" id="t4w-iu-Tff"/>
