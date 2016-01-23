@@ -17,6 +17,8 @@
 		175DDE571BB4662F00CAE642 /* SketchGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = 175DDE561BB4662F00CAE642 /* SketchGuess.m */; };
 		17EBC0171BE452C800E9C83A /* Credits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EBC0161BE452C800E9C83A /* Credits.storyboard */; };
 		17EBC01A1BE9575D00E9C83A /* WordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EBC0191BE9575D00E9C83A /* WordsViewController.m */; };
+		293118D41C531F9D00D1FB31 /* EndGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 293118D31C531F9D00D1FB31 /* EndGameCell.xib */; };
+		293118D91C53205100D1FB31 /* EndGameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 293118D81C53205100D1FB31 /* EndGameCollectionViewCell.m */; };
 		294B7A331C3B6C2300F61142 /* GamePlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294B7A321C3B6C2300F61142 /* GamePlay.storyboard */; };
 		294B7A361C3B712E00F61142 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294B7A351C3B712E00F61142 /* GamePlayViewController.m */; };
 		298643601C3CD5F800D0F12B /* EndGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2986435F1C3CD5F800D0F12B /* EndGameViewController.m */; };
@@ -84,6 +86,9 @@
 		17EBC0161BE452C800E9C83A /* Credits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
 		17EBC0181BE9575D00E9C83A /* WordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsViewController.h; sourceTree = "<group>"; };
 		17EBC0191BE9575D00E9C83A /* WordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsViewController.m; sourceTree = "<group>"; };
+		293118D31C531F9D00D1FB31 /* EndGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndGameCell.xib; sourceTree = "<group>"; };
+		293118D71C53205100D1FB31 /* EndGameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameCollectionViewCell.h; sourceTree = "<group>"; };
+		293118D81C53205100D1FB31 /* EndGameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndGameCollectionViewCell.m; sourceTree = "<group>"; };
 		294B7A321C3B6C2300F61142 /* GamePlay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamePlay.storyboard; sourceTree = "<group>"; };
 		294B7A341C3B712E00F61142 /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayViewController.h; sourceTree = "<group>"; };
 		294B7A351C3B712E00F61142 /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
@@ -265,6 +270,7 @@
 				17EBC0161BE452C800E9C83A /* Credits.storyboard */,
 				172D2A051BB1180C00120637 /* PassViewController.xib */,
 				3481D33E1BA7BF7400BFBCC5 /* wordsCell.xib */,
+				293118D31C531F9D00D1FB31 /* EndGameCell.xib */,
 				3481D3401BA7BF8500BFBCC5 /* drawingCell.xib */,
 				34A681F81BAF1C430053C9F0 /* BackgroundGradient.h */,
 				3EF50B371BB1BBE4007CCCD4 /* EndOfGameStoryboard.storyboard */,
@@ -309,6 +315,8 @@
 				3E1B2D661BB210D800EF25B7 /* ExperimentalViewController.m */,
 				3488D26D1BB08A78007384FA /* WordsTableViewCell.h */,
 				3488D26E1BB08A78007384FA /* WordsTableViewCell.m */,
+				293118D71C53205100D1FB31 /* EndGameCollectionViewCell.h */,
+				293118D81C53205100D1FB31 /* EndGameCollectionViewCell.m */,
 				3488D2701BB08C5D007384FA /* DrawingTableViewCell.h */,
 				3488D2711BB08C5D007384FA /* DrawingTableViewCell.m */,
 			);
@@ -406,6 +414,7 @@
 		3430FBDD1BA3A00D007C108D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Matthew McClure";
 				TargetAttributes = {
@@ -454,6 +463,7 @@
 				294B7A331C3B6C2300F61142 /* GamePlay.storyboard in Resources */,
 				17EBC0171BE452C800E9C83A /* Credits.storyboard in Resources */,
 				347685D41BB4700D00C58742 /* souvenirCell.xib in Resources */,
+				293118D41C531F9D00D1FB31 /* EndGameCell.xib in Resources */,
 				3481D3411BA7BF8500BFBCC5 /* drawingCell.xib in Resources */,
 				172D2A061BB1180C00120637 /* PassViewController.xib in Resources */,
 				3430FBF31BA3A00D007C108D /* Main.storyboard in Resources */,
@@ -526,6 +536,7 @@
 				172D2A091BB123AB00120637 /* PassViewController.m in Sources */,
 				348667B81BAF6AFF002C5825 /* EndOfGameViewController.m in Sources */,
 				3486387A1BA3CBC0001AA58D /* SeedViewController.m in Sources */,
+				293118D91C53205100D1FB31 /* EndGameCollectionViewCell.m in Sources */,
 				3430FBED1BA3A00D007C108D /* AppDelegate.m in Sources */,
 				294B7A361C3B712E00F61142 /* GamePlayViewController.m in Sources */,
 				34A681FA1BAF1C430053C9F0 /* BackgroundGradient.m in Sources */,
@@ -681,10 +692,12 @@
 			baseConfigurationReference = 8B8F9765CC7BC07A43A7A7D6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "words-drawings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MM.words-drawings";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -694,6 +707,7 @@
 			baseConfigurationReference = 3A7B88D51D617685143CB19D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "words-drawings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MM.words-drawings";

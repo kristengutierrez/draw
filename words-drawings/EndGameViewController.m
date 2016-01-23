@@ -7,8 +7,12 @@
 //
 
 #import "EndGameViewController.h"
+#import "EndGameCollectionViewCell.h"
 
 @interface EndGameViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
+
+
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *curtainTopConstraint;
 
@@ -62,7 +66,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return self.finalArrayOfSketchGuesses.count;
+    NSInteger cellCount = self.finalArrayOfSketchGuesses.count;
+    return cellCount;
     
 }
 
@@ -70,13 +75,22 @@
     
     static NSString *identifier = @"Cell";
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    UINib *nib = [UINib nibWithNibName:@"EndGameCell" bundle: nil];
+    [collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
+//    nibMyCellloaded = YES;
     
-//    UIImageView *collectionImageView = (UIImageView *)[cell viewWithTag:100];
+    EndGameCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-//    collectionImageView.image = [UIImage imageNamed:[collectionImages objectAtIndex:indexPath.row]];
+    if (indexPath.row % 2 == 0) {
+        cell.guessLabel.text = [self.finalArrayOfSketchGuesses objectAtIndex:indexPath.row];
+        cell.sketchImageView.hidden = YES;
+    } else {
+        cell.guessLabel.hidden = YES;
+        cell.sketchImageView.image = [self.finalArrayOfSketchGuesses objectAtIndex:indexPath.row];
+//        cell.sketchImageView.backgroundColor = [UIColor redColor];
+    }
+    
     return cell;
-    
 }
 
 - (IBAction)clickToViewGameSummary:(UIButton *)sender {

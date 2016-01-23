@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     //remove later
-    self.totalNumberOfRounds = 5;
+    self.totalNumberOfRounds = 4;
     
     self.roundCount = 0;
     self.passItOnViewTopConstraint.constant = -1000;
@@ -95,15 +95,13 @@
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
     
-    if (self.roundCount < self.totalNumberOfRounds - 1) {
+    if (self.roundCount < self.totalNumberOfRounds) {
         if (self.roundCount % 2 == 0) {
             //if in a drawing round
             
             //save what is in the drawing pad uiview as a uiimage
             //but for now just save this
             UIImage *savedImage = [UIImage imageNamed:@"gradient2.jpg"];
-            
-//            self.currentSketchGuess.sketchReplacementProperty = savedImage;
             
             [self.arrayOfSketchesAndGuesses addObject:savedImage];
             NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
@@ -115,13 +113,11 @@
             //if in a guessing round
             [self viewDidAppear:true];
             
-//            self.currentSketchGuess.guessReplacementProperty = self.imageDescriptionTextField.text;
             
             NSString *guess = self.imageDescriptionTextField.text;
             [self.arrayOfSketchesAndGuesses addObject:guess];
             
             self.textBoxLabel.text = self.imageDescriptionTextField.text;
-            self.imageDescriptionTextField.text = @"";
         }
         
         
@@ -129,13 +125,18 @@
             self.passItOnViewTopConstraint.constant = 0;
             [self.passItOnView layoutIfNeeded];
         } completion:^(BOOL finished){
-            
+            self.imageDescriptionTextField.text = @"";
+
             self.roundCount++;
             [self toggleRoundInterface];
             
         }];
+        
+        if (self.roundCount == self.totalNumberOfRounds - 1) {
+            [self performSegueWithIdentifier:@"goToEndGame" sender:nil];
+        }
     } else {
-        [self performSegueWithIdentifier:@"goToEndGame" sender:nil];
+        
     }
   
     
