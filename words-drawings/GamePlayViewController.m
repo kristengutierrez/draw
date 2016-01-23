@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.imageDescriptionTextField.delegate = self;
     
     //remove later
     self.totalNumberOfRounds = 4;
@@ -70,10 +71,11 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
+
 
 - (void)toggleRoundInterface {
     if (self.roundCount % 2 == 0) {
