@@ -38,6 +38,7 @@
     
     self.sketchImageView.hidden = YES;
     
+//    [self.imageDescriptionTextField becomeFirstResponder];
     self.imageDescriptionTextField.delegate = self;
     
     self.jotVC = [[JotViewController alloc] init];
@@ -75,8 +76,11 @@
     
 }
 
+
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [self doneButtonPressed:nil];
     return NO;
 }
 
@@ -100,6 +104,7 @@
 }
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
+    [self.imageDescriptionTextField resignFirstResponder];
     
     if (self.roundCount < self.totalNumberOfRounds) {
         if (self.roundCount % 2 == 0) {
@@ -148,6 +153,8 @@
   
     
 }
+
+
 
 
  #pragma mark - Navigation
