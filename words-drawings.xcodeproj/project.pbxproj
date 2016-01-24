@@ -73,7 +73,7 @@
 		294B7A351C3B712E00F61142 /* GamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
 		2986435E1C3CD5F800D0F12B /* EndGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameViewController.h; sourceTree = "<group>"; };
 		2986435F1C3CD5F800D0F12B /* EndGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndGameViewController.m; sourceTree = "<group>"; };
-		3430FBE51BA3A00D007C108D /* words-drawings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "words-drawings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3430FBE51BA3A00D007C108D /* sketch & guess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sketch & guess.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3430FBE91BA3A00D007C108D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3430FBEB1BA3A00D007C108D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3430FBEC1BA3A00D007C108D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		3430FBE61BA3A00D007C108D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3430FBE51BA3A00D007C108D /* words-drawings.app */,
+				3430FBE51BA3A00D007C108D /* sketch & guess.app */,
 				3430FC011BA3A00D007C108D /* words-drawingsTests.xctest */,
 				3430FC0C1BA3A00D007C108D /* words-drawingsUITests.xctest */,
 			);
@@ -316,7 +316,7 @@
 			);
 			name = "words-drawings";
 			productName = "words-drawings";
-			productReference = 3430FBE51BA3A00D007C108D /* words-drawings.app */;
+			productReference = 3430FBE51BA3A00D007C108D /* sketch & guess.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3430FC001BA3A00D007C108D /* words-drawingsTests */ = {
@@ -632,7 +632,7 @@
 				INFOPLIST_FILE = "words-drawings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MM.words-drawings";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "sketch & guess";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -647,7 +647,7 @@
 				INFOPLIST_FILE = "words-drawings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MM.words-drawings";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "sketch & guess";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
