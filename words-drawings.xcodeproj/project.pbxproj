@@ -37,7 +37,7 @@
 		347685DD1BB4A88300C58742 /* BetterInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347685DC1BB4A88300C58742 /* BetterInstructionsViewController.m */; };
 		3481D33F1BA7BF7400BFBCC5 /* wordsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3481D33E1BA7BF7400BFBCC5 /* wordsCell.xib */; };
 		3481D3411BA7BF8500BFBCC5 /* drawingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3481D3401BA7BF8500BFBCC5 /* drawingCell.xib */; };
-		3486387A1BA3CBC0001AA58D /* SeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348638791BA3CBC0001AA58D /* SeedViewController.m */; };
+		3486387A1BA3CBC0001AA58D /* CustomPromptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348638791BA3CBC0001AA58D /* CustomPromptViewController.m */; };
 		3486387D1BA3CC99001AA58D /* PassItOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3486387C1BA3CC99001AA58D /* PassItOnViewController.m */; };
 		348667B51BAF499B002C5825 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348667B41BAF499B002C5825 /* SettingsViewController.m */; };
 		348667B81BAF6AFF002C5825 /* EndOfGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348667B71BAF6AFF002C5825 /* EndOfGameViewController.m */; };
@@ -120,10 +120,10 @@
 		347685DC1BB4A88300C58742 /* BetterInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetterInstructionsViewController.m; sourceTree = "<group>"; };
 		3481D33E1BA7BF7400BFBCC5 /* wordsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = wordsCell.xib; sourceTree = "<group>"; };
 		3481D3401BA7BF8500BFBCC5 /* drawingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = drawingCell.xib; sourceTree = "<group>"; };
-		348638781BA3CBC0001AA58D /* SeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedViewController.h; sourceTree = "<group>"; };
-		348638791BA3CBC0001AA58D /* SeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedViewController.m; sourceTree = "<group>"; };
+		348638781BA3CBC0001AA58D /* CustomPromptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CustomPromptViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		348638791BA3CBC0001AA58D /* CustomPromptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CustomPromptViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3486387B1BA3CC99001AA58D /* PassItOnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassItOnViewController.h; sourceTree = "<group>"; };
-		3486387C1BA3CC99001AA58D /* PassItOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassItOnViewController.m; sourceTree = "<group>"; };
+		3486387C1BA3CC99001AA58D /* PassItOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PassItOnViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		348667B31BAF499B002C5825 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		348667B41BAF499B002C5825 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		348667B61BAF6AFF002C5825 /* EndOfGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndOfGameViewController.h; sourceTree = "<group>"; };
@@ -301,8 +301,8 @@
 				34A681FF1BAF268D0053C9F0 /* ChooseOptionViewController.m */,
 				348667B31BAF499B002C5825 /* SettingsViewController.h */,
 				348667B41BAF499B002C5825 /* SettingsViewController.m */,
-				348638781BA3CBC0001AA58D /* SeedViewController.h */,
-				348638791BA3CBC0001AA58D /* SeedViewController.m */,
+				348638781BA3CBC0001AA58D /* CustomPromptViewController.h */,
+				348638791BA3CBC0001AA58D /* CustomPromptViewController.m */,
 				342BE8271BA3D27D00700F02 /* ScrollTableViewController.h */,
 				342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */,
 				2986435E1C3CD5F800D0F12B /* EndGameViewController.h */,
@@ -535,7 +535,7 @@
 				347685DD1BB4A88300C58742 /* BetterInstructionsViewController.m in Sources */,
 				172D2A091BB123AB00120637 /* PassViewController.m in Sources */,
 				348667B81BAF6AFF002C5825 /* EndOfGameViewController.m in Sources */,
-				3486387A1BA3CBC0001AA58D /* SeedViewController.m in Sources */,
+				3486387A1BA3CBC0001AA58D /* CustomPromptViewController.m in Sources */,
 				293118D91C53205100D1FB31 /* EndGameCollectionViewCell.m in Sources */,
 				3430FBED1BA3A00D007C108D /* AppDelegate.m in Sources */,
 				294B7A361C3B712E00F61142 /* GamePlayViewController.m in Sources */,

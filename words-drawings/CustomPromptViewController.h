@@ -1,5 +1,5 @@
 //
-//  SeedViewController.h
+//  CustomPromptViewController.h
 //  words-drawings
 //
 //  Created by Matthew McClure on 9/11/15.
@@ -10,7 +10,7 @@
 
 @class ChooseCategoryViewController;
 
-@interface SeedViewController : UIViewController
+@interface CustomPromptViewController : UIViewController
 
 @property (strong,nonatomic) NSString *seedSentence;
 @property NSInteger numberOfPlayers;

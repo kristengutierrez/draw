@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="942" y="142.5"/>
         </scene>
-        <!--Seed View Controller-->
+        <!--Custom Prompt View Controller-->
         <scene sceneID="5uA-zl-z30">
             <objects>
-                <viewController id="Hwh-cx-CZh" customClass="SeedViewController" sceneMemberID="viewController">
+                <viewController id="Hwh-cx-CZh" customClass="CustomPromptViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eta-XX-LGK"/>
                         <viewControllerLayoutGuide type="bottom" id="Swt-P7-Gnc"/>

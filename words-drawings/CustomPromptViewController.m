@@ -1,23 +1,23 @@
 //
-//  SeedViewController.m
+//  CustomPromptViewController.m
 //  words-drawings
 //
 //  Created by Matthew McClure on 9/11/15.
 //  Copyright © 2015 Matthew McClure. All rights reserved.
 //
 
-#import "SeedViewController.h"
+#import "CustomPromptViewController.h"
 #import "PassItOnViewController.h"
 #import "ChooseCategoryViewController.h"
 
-@interface SeedViewController () <UITextFieldDelegate>
+@interface CustomPromptViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *seedSentenceTextField;
 - (IBAction)doneButton:(UIButton *)sender;
 
 @end
 
-@implementation SeedViewController
+@implementation CustomPromptViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

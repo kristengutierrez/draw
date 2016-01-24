@@ -8,7 +8,7 @@
 
 #import "ChooseCategoryViewController.h"
 #import "ChooseOptionViewController.h"
-#import "SeedViewController.h"
+#import "CustomPromptViewController.h"
 #import <stdlib.h>
 
 @interface ChooseCategoryViewController ()
@@ -90,7 +90,7 @@
     chooseOptionVC.numberOfPlayers = self.numberOfPlayers;
     chooseOptionVC.durationOfRound = self.durationOfRound;
   } else if ([[segue identifier] isEqualToString:@"showSeedVC"]){
-    SeedViewController *seedVC = (SeedViewController *)[segue destinationViewController];
+    CustomPromptViewController *seedVC = (CustomPromptViewController *)[segue destinationViewController];
     seedVC.numberOfPlayers = self.numberOfPlayers;
     seedVC.durationOfRound = self.durationOfRound;
   }
