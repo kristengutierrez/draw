@@ -16,7 +16,6 @@
 		175DDE541BB465EC00CAE642 /* Guess.m in Sources */ = {isa = PBXBuildFile; fileRef = 175DDE531BB465EC00CAE642 /* Guess.m */; };
 		175DDE571BB4662F00CAE642 /* SketchGuess.m in Sources */ = {isa = PBXBuildFile; fileRef = 175DDE561BB4662F00CAE642 /* SketchGuess.m */; };
 		17EBC0171BE452C800E9C83A /* Credits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EBC0161BE452C800E9C83A /* Credits.storyboard */; };
-		17EBC01A1BE9575D00E9C83A /* WordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EBC0191BE9575D00E9C83A /* WordsViewController.m */; };
 		293118D41C531F9D00D1FB31 /* EndGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 293118D31C531F9D00D1FB31 /* EndGameCell.xib */; };
 		293118D91C53205100D1FB31 /* EndGameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 293118D81C53205100D1FB31 /* EndGameCollectionViewCell.m */; };
 		294B7A331C3B6C2300F61142 /* GamePlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294B7A321C3B6C2300F61142 /* GamePlay.storyboard */; };
@@ -84,8 +83,6 @@
 		175DDE551BB4662F00CAE642 /* SketchGuess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchGuess.h; sourceTree = "<group>"; };
 		175DDE561BB4662F00CAE642 /* SketchGuess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchGuess.m; sourceTree = "<group>"; };
 		17EBC0161BE452C800E9C83A /* Credits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
-		17EBC0181BE9575D00E9C83A /* WordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsViewController.h; sourceTree = "<group>"; };
-		17EBC0191BE9575D00E9C83A /* WordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsViewController.m; sourceTree = "<group>"; };
 		293118D31C531F9D00D1FB31 /* EndGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndGameCell.xib; sourceTree = "<group>"; };
 		293118D71C53205100D1FB31 /* EndGameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameCollectionViewCell.h; sourceTree = "<group>"; };
 		293118D81C53205100D1FB31 /* EndGameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndGameCollectionViewCell.m; sourceTree = "<group>"; };
@@ -289,8 +286,6 @@
 				3430FC221BA3A07C007C108D /* MainViewController.m */,
 				294B7A341C3B712E00F61142 /* GamePlayViewController.h */,
 				294B7A351C3B712E00F61142 /* GamePlayViewController.m */,
-				17EBC0181BE9575D00E9C83A /* WordsViewController.h */,
-				17EBC0191BE9575D00E9C83A /* WordsViewController.m */,
 				3486387B1BA3CC99001AA58D /* PassItOnViewController.h */,
 				3486387C1BA3CC99001AA58D /* PassItOnViewController.m */,
 				172D2A071BB123AB00120637 /* PassViewController.h */,
@@ -541,7 +536,6 @@
 				294B7A361C3B712E00F61142 /* GamePlayViewController.m in Sources */,
 				34A681FA1BAF1C430053C9F0 /* BackgroundGradient.m in Sources */,
 				3486387D1BA3CC99001AA58D /* PassItOnViewController.m in Sources */,
-				17EBC01A1BE9575D00E9C83A /* WordsViewController.m in Sources */,
 				342BE8291BA3D27D00700F02 /* ScrollTableViewController.m in Sources */,
 				3430FBEA1BA3A00D007C108D /* main.m in Sources */,
 				3488D2721BB08C5D007384FA /* DrawingTableViewCell.m in Sources */,

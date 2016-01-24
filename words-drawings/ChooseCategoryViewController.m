@@ -14,21 +14,17 @@
 @interface ChooseCategoryViewController ()
 
 @property (strong,nonatomic) NSString *categoryPressed;
-
 - (IBAction)goBack:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *category1Button;
 @property (weak, nonatomic) IBOutlet UIButton *category2Button;
 @property (weak, nonatomic) IBOutlet UIButton *category3Button;
-@property (weak, nonatomic) IBOutlet UIButton *diyButton;
-
+@property (weak, nonatomic) IBOutlet UIButton *category4Button;
 
 - (IBAction)category1Pressed:(UIButton *)sender;
 - (IBAction)category2Pressed:(UIButton *)sender;
 - (IBAction)category3Pressed:(UIButton *)sender;
-- (IBAction)diyPressed:(UIButton *)sender;
-
-
+- (IBAction)category4Pressed:(UIButton *)sender;
 
 @property (strong,nonatomic) NSMutableArray *categoriesArray;
 @property (strong,nonatomic) NSMutableArray *thisRoundsArray;
@@ -43,35 +39,39 @@
     [super viewDidLoad];
   
   _thisRoundsArray = [[NSMutableArray alloc] init];
-  
   _categoriesArray = [NSMutableArray arrayWithObjects: @"FILM & TV", @"MUSIC", @"SPORTS", @"HISTORY", @"SCIENCE", @"GEOGRAPHY", @"THE ARTS", nil];
   
   NSInteger j = [_categoriesArray count];
   
-  //randomize category selections. will always display 3 randomized options, plus DIY option.
-  int remaining = 3;
+  //randomize category selections, display 4 randomized options
+  int remaining = 4;
   
   if (_categoriesArray.count >= remaining) {
     while (remaining > 0) {
       NSInteger k = arc4random_uniform((u_int32_t)j) % 7;
-      NSLog(@"k = %ld", (long)k);
+//      NSLog(@"k = %ld", (long)k);
       
       NSString *string = _categoriesArray[k];
-      NSLog(@"%@", string);
+//      NSLog(@"%@", string);
       if (![_thisRoundsArray containsObject:string]){
         [_thisRoundsArray addObject:string];
         remaining--;
       }
     }
   }
-  NSLog(@" thisRoundsArray after: %lu", (unsigned long)_thisRoundsArray.count);
+//  NSLog(@" thisRoundsArray after: %lu", (unsigned long)_thisRoundsArray.count);
   
   NSLog(@"%@",_thisRoundsArray[0]);
+    NSLog(@"%@",_thisRoundsArray[1]);
+    NSLog(@"%@",_thisRoundsArray[2]);
+    NSLog(@"%@",_thisRoundsArray[3]);
   
   //set text on buttons
-  [_category1Button setTitle: _thisRoundsArray[0] forState: UIControlStateNormal];
-  [_category2Button setTitle: _thisRoundsArray[1] forState: UIControlStateNormal];
-  [_category3Button setTitle: _thisRoundsArray[2] forState: UIControlStateNormal];
+  [self.category1Button setTitle: _thisRoundsArray[0] forState: UIControlStateNormal];
+  [self.category2Button setTitle: _thisRoundsArray[1] forState: UIControlStateNormal];
+  [self.category3Button setTitle: _thisRoundsArray[2] forState: UIControlStateNormal];
+  [self.category4Button setTitle: _thisRoundsArray[3] forState: UIControlStateNormal];
+    [self viewDidAppear:true];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,21 +110,22 @@
 - (IBAction)category2Pressed:(UIButton *)sender {
   self.categoryPressed = _thisRoundsArray[1];
   NSLog(@"%@", self.categoryPressed);
-  //[self selectArray:self.categoryPressed];
-  //self.selectedArray = _filmAndTVArray;
-  //NSLog(@"ARRAY WAS>>> %@", self.selectedArray);
+ 
   [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
 - (IBAction)category3Pressed:(UIButton *)sender {
   self.categoryPressed = _thisRoundsArray[2];
   NSLog(@"%@", self.categoryPressed);
-  //[self selectArray:self.categoryPressed];
-  //self.selectedArray = _filmAndTVArray;
-  //NSLog(@"ARRAY WAS>>> %@", self.selectedArray);
+ 
   [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
 
-- (IBAction)diyPressed:(UIButton *)sender {
+- (IBAction)category4Pressed:(UIButton *)sender {
+    self.categoryPressed = _thisRoundsArray[3];
+    NSLog(@"%@", self.categoryPressed);
+    
+    [self performSegueWithIdentifier:@"ShowOptions" sender:self];
+    
 }
 
 @end
