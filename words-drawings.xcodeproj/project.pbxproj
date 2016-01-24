@@ -39,7 +39,6 @@
 		3486387A1BA3CBC0001AA58D /* CustomPromptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348638791BA3CBC0001AA58D /* CustomPromptViewController.m */; };
 		3486387D1BA3CC99001AA58D /* PassItOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3486387C1BA3CC99001AA58D /* PassItOnViewController.m */; };
 		348667B51BAF499B002C5825 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348667B41BAF499B002C5825 /* SettingsViewController.m */; };
-		348667B81BAF6AFF002C5825 /* EndOfGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348667B71BAF6AFF002C5825 /* EndOfGameViewController.m */; };
 		3488D26F1BB08A78007384FA /* WordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3488D26E1BB08A78007384FA /* WordsTableViewCell.m */; };
 		3488D2721BB08C5D007384FA /* DrawingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3488D2711BB08C5D007384FA /* DrawingTableViewCell.m */; };
 		34A681FA1BAF1C430053C9F0 /* BackgroundGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A681F91BAF1C430053C9F0 /* BackgroundGradient.m */; };
@@ -123,8 +122,6 @@
 		3486387C1BA3CC99001AA58D /* PassItOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PassItOnViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		348667B31BAF499B002C5825 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		348667B41BAF499B002C5825 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		348667B61BAF6AFF002C5825 /* EndOfGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndOfGameViewController.h; sourceTree = "<group>"; };
-		348667B71BAF6AFF002C5825 /* EndOfGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndOfGameViewController.m; sourceTree = "<group>"; };
 		3488D26D1BB08A78007384FA /* WordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsTableViewCell.h; sourceTree = "<group>"; };
 		3488D26E1BB08A78007384FA /* WordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsTableViewCell.m; sourceTree = "<group>"; };
 		3488D2701BB08C5D007384FA /* DrawingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingTableViewCell.h; sourceTree = "<group>"; };
@@ -302,8 +299,6 @@
 				342BE8281BA3D27D00700F02 /* ScrollTableViewController.m */,
 				2986435E1C3CD5F800D0F12B /* EndGameViewController.h */,
 				2986435F1C3CD5F800D0F12B /* EndGameViewController.m */,
-				348667B61BAF6AFF002C5825 /* EndOfGameViewController.h */,
-				348667B71BAF6AFF002C5825 /* EndOfGameViewController.m */,
 				347685DB1BB4A88300C58742 /* BetterInstructionsViewController.h */,
 				347685DC1BB4A88300C58742 /* BetterInstructionsViewController.m */,
 				3E1B2D651BB210D800EF25B7 /* ExperimentalViewController.h */,
@@ -529,7 +524,6 @@
 				347685DA1BB476BC00C58742 /* SouvenirCollectionViewCell.m in Sources */,
 				347685DD1BB4A88300C58742 /* BetterInstructionsViewController.m in Sources */,
 				172D2A091BB123AB00120637 /* PassViewController.m in Sources */,
-				348667B81BAF6AFF002C5825 /* EndOfGameViewController.m in Sources */,
 				3486387A1BA3CBC0001AA58D /* CustomPromptViewController.m in Sources */,
 				293118D91C53205100D1FB31 /* EndGameCollectionViewCell.m in Sources */,
 				3430FBED1BA3A00D007C108D /* AppDelegate.m in Sources */,
