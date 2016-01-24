@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) NSString *firstPrompt;
 @property NSInteger totalNumberOfRounds;
+@property NSInteger durationOfRound;
 
 @end

@@ -16,13 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *passItOnView;
 - (IBAction)hidePassItOnView:(UIButton *)sender;
-
 @property (nonatomic, strong) JotViewController *jotVC;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passItOnViewTopConstraint;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passItOnViewBottomConstraint;
-
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *textBoxLabel;
 @property (weak, nonatomic) IBOutlet UITextField *imageDescriptionTextField;
@@ -31,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sketchImageView;
 @property NSInteger roundCount;
 @property NSMutableArray *arrayOfSketchesAndGuesses;
-//@property SketchGuess *currentSketchGuess;
+
 
 @end
 
@@ -54,21 +50,15 @@
 //    [cell layoutIfNeeded];
     
     //remove later
-    self.totalNumberOfRounds = 4;
+//    self.totalNumberOfRounds = 4;
     
     self.roundCount = 0;
     self.passItOnViewTopConstraint.constant = -1000;
     
-    //create first SketchGuess instance and set guess string to first prompt
-//    self.currentSketchGuess = [[SketchGuess alloc] init];
-    
-    
     self.arrayOfSketchesAndGuesses = [[NSMutableArray alloc] init];
     
     //set this for now, later it will come from other vc
-    self.firstPrompt = @"this is the first prompt";
-    
-//    self.currentSketchGuess.guessReplacementProperty = self.firstPrompt;
+//    self.firstPrompt = @"this is the first prompt";
     
     [self.arrayOfSketchesAndGuesses addObject:self.firstPrompt];
     
