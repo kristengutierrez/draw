@@ -7,7 +7,6 @@
 //
 
 #import "GamePlayViewController.h"
-#import "SketchGuess.h"
 #import "EndGameViewController.h"
 #import "JotViewController.h"
 

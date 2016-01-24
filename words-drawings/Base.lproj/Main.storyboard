@@ -1154,39 +1154,12 @@
                             <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-Mg-em7">
                                 <rect key="frame" x="34" y="33" width="529" height="552"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-XT-Tee">
-                                        <rect key="frame" x="40" y="134" width="469" height="344.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="469" id="Seg-ye-t8t">
-                                                <variation key="heightClass=compact" constant="289"/>
-                                                <variation key="heightClass=compact-widthClass=regular" constant="448"/>
-                                            </constraint>
-                                            <constraint firstAttribute="height" constant="302" id="im3-2I-j4P">
-                                                <variation key="heightClass=compact" constant="112"/>
-                                                <variation key="heightClass=compact-widthClass=regular" constant="182"/>
-                                            </constraint>
-                                        </constraints>
-                                        <string key="text">This game is best experienced with 5 or more players. First, choose a category and prompt or create your own. Then, pass the device to the person on your right. That person will draw a picture of the chosen prompt. (No text is allowed in a drawing.) They then pass the device to the next person who has to enter a guess of what the last image was. The process is repeated as the device moves around the circle.</string>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <mask key="constraints">
-                                                <exclude reference="im3-2I-j4P"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        </variation>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTQ-xy-D8e">
-                                        <rect key="frame" x="230" y="486" width="90" height="46"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.26274509800000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="475" y="8" width="46" height="46"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="8dm-Fp-igs"/>
-                                            <constraint firstAttribute="width" constant="90" id="LFy-C4-gbh">
+                                            <constraint firstAttribute="width" constant="46" id="LFy-C4-gbh">
                                                 <variation key="heightClass=compact" constant="64"/>
                                             </constraint>
                                             <constraint firstAttribute="height" constant="46" id="Zej-jb-MJr">
@@ -1195,8 +1168,8 @@
                                             </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
-                                        <state key="normal" title="Got It">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1210,77 +1183,92 @@
                                             <action selector="closeThisButton:" destination="0kV-Om-zVf" eventType="touchUpInside" id="3Yh-UI-vef"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="Instructions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mN-JB-eSv">
-                                        <rect key="frame" x="124" y="35" width="303" height="76.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46.5" id="aUl-KS-Igo"/>
-                                            <constraint firstAttribute="height" constant="50.5" id="boN-gq-PKg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="41"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="aUl-KS-Igo"/>
-                                                <exclude reference="boN-gq-PKg"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
-                                            <mask key="constraints">
-                                                <include reference="aUl-KS-Igo"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <mask key="constraints">
-                                                <exclude reference="boN-gq-PKg"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="58"/>
-                                        </variation>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-sF-JIi">
+                                        <rect key="frame" x="30" y="75" width="469" height="402"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="Instructions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mN-JB-eSv">
+                                                <rect key="frame" x="124" y="0.0" width="222" height="57"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46.5" id="aUl-KS-Igo"/>
+                                                    <constraint firstAttribute="height" constant="50.5" id="boN-gq-PKg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="41"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="aUl-KS-Igo"/>
+                                                        <exclude reference="boN-gq-PKg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                    <mask key="constraints">
+                                                        <include reference="aUl-KS-Igo"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="boN-gq-PKg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="58"/>
+                                                </variation>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-XT-Tee">
+                                                <rect key="frame" x="0.0" y="57" width="469" height="345"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="469" id="Seg-ye-t8t">
+                                                        <variation key="heightClass=compact" constant="289"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="448"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="302" id="im3-2I-j4P">
+                                                        <variation key="heightClass=compact" constant="112"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="182"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <string key="text">This game is best experienced with 4 or more players. First, choose a category and prompt. Then, pass the device to the person on your right. That person will draw a picture of the chosen prompt. (Text is not allowed in a drawing.) They then pass the device to the next person who enters a guess of what the last image was in the text field. The process is repeated as the device is passed around to all of the players.</string>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Seg-ye-t8t"/>
+                                                        <exclude reference="im3-2I-j4P"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <mask key="constraints">
+                                                        <exclude reference="im3-2I-j4P"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                </variation>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.37254901959999998" green="0.47843137250000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="3mN-JB-eSv" firstAttribute="centerX" secondItem="eZX-Mg-em7" secondAttribute="centerX" id="CFC-lC-pTo"/>
+                                    <constraint firstAttribute="trailing" secondItem="bbf-sF-JIi" secondAttribute="trailing" constant="30" id="2dE-ef-SNW"/>
+                                    <constraint firstItem="bbf-sF-JIi" firstAttribute="leading" secondItem="eZX-Mg-em7" secondAttribute="leading" constant="30" id="9UF-GD-aCI"/>
+                                    <constraint firstAttribute="trailing" secondItem="FTQ-xy-D8e" secondAttribute="trailing" constant="8" id="Fjb-20-5Ss"/>
                                     <constraint firstItem="FTQ-xy-D8e" firstAttribute="centerX" secondItem="eZX-Mg-em7" secondAttribute="centerX" constant="10.5" id="GnT-Ou-pDb">
                                         <variation key="heightClass=compact" constant="0.0"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="-0.5"/>
                                     </constraint>
-                                    <constraint firstItem="FTQ-xy-D8e" firstAttribute="centerX" secondItem="3mN-JB-eSv" secondAttribute="centerX" id="H72-2c-M0N">
-                                        <variation key="heightClass=compact-widthClass=regular" constant="-10.75"/>
-                                        <variation key="heightClass=regular-widthClass=regular" constant="-0.25"/>
-                                    </constraint>
                                     <constraint firstItem="FTQ-xy-D8e" firstAttribute="width" secondItem="eZX-Mg-em7" secondAttribute="width" id="Lsj-NG-AN1"/>
-                                    <constraint firstItem="kdd-XT-Tee" firstAttribute="centerY" secondItem="eZX-Mg-em7" secondAttribute="centerY" constant="9" id="MQf-EQ-FiW">
-                                        <variation key="heightClass=compact" constant="-0.5"/>
-                                        <variation key="heightClass=compact-widthClass=regular" constant="-0.5"/>
-                                    </constraint>
-                                    <constraint firstItem="kdd-XT-Tee" firstAttribute="top" secondItem="3mN-JB-eSv" secondAttribute="bottom" constant="22" id="VDR-kF-fcD">
-                                        <variation key="heightClass=compact" constant="-1.5"/>
-                                        <variation key="heightClass=compact-widthClass=regular" constant="8.5"/>
-                                        <variation key="heightClass=regular-widthClass=regular" constant="8"/>
-                                    </constraint>
-                                    <constraint firstItem="kdd-XT-Tee" firstAttribute="centerX" secondItem="eZX-Mg-em7" secondAttribute="centerX" constant="10" id="X3N-tR-y6b">
-                                        <variation key="heightClass=compact" constant="0.0"/>
-                                        <variation key="heightClass=compact-widthClass=regular" constant="11"/>
-                                    </constraint>
                                     <constraint firstItem="FTQ-xy-D8e" firstAttribute="centerX" secondItem="eZX-Mg-em7" secondAttribute="centerX" id="Ygs-by-OZ7"/>
-                                    <constraint firstItem="FTQ-xy-D8e" firstAttribute="top" secondItem="kdd-XT-Tee" secondAttribute="bottom" constant="50" id="jqh-zH-Dt6">
-                                        <variation key="heightClass=compact" constant="8"/>
-                                        <variation key="heightClass=compact-widthClass=regular" constant="13"/>
-                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
-                                    </constraint>
+                                    <constraint firstItem="FTQ-xy-D8e" firstAttribute="top" secondItem="eZX-Mg-em7" secondAttribute="top" constant="8" id="cbM-4z-vms"/>
                                     <constraint firstItem="FTQ-xy-D8e" firstAttribute="centerX" secondItem="eZX-Mg-em7" secondAttribute="centerX" id="quv-Zi-ap5"/>
-                                    <constraint firstItem="3mN-JB-eSv" firstAttribute="top" secondItem="eZX-Mg-em7" secondAttribute="top" constant="16" id="tbg-ML-Cbd">
-                                        <variation key="heightClass=compact-widthClass=regular" constant="11"/>
-                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="CFC-lC-pTo"/>
-                                        <exclude reference="tbg-ML-Cbd"/>
+                                        <exclude reference="GnT-Ou-pDb"/>
                                         <exclude reference="Lsj-NG-AN1"/>
                                         <exclude reference="Ygs-by-OZ7"/>
                                         <exclude reference="quv-Zi-ap5"/>
@@ -1288,22 +1276,19 @@
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="CFC-lC-pTo"/>
                                         <exclude reference="GnT-Ou-pDb"/>
-                                        <exclude reference="H72-2c-M0N"/>
                                         <include reference="quv-Zi-ap5"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="tbg-ML-Cbd"/>
                                         <exclude reference="GnT-Ou-pDb"/>
                                         <include reference="Ygs-by-OZ7"/>
                                     </mask>
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.83921568629999999" green="0.85490196080000003" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eZX-Mg-em7" firstAttribute="trailing" secondItem="Trh-1X-NpW" secondAttribute="trailingMargin" constant="-17" id="8Fj-pS-S3g"/>
                             <constraint firstItem="eZX-Mg-em7" firstAttribute="leading" secondItem="Trh-1X-NpW" secondAttribute="leadingMargin" constant="14" id="WW8-Xf-fi2"/>
@@ -1314,7 +1299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTj-yd-7J9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="835.5"/>
+            <point key="canvasLocation" x="804" y="835"/>
         </scene>
         <!--End Of Game View Controller-->
         <scene sceneID="cbI-R2-rs1">

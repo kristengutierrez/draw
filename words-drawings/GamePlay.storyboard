@@ -268,43 +268,44 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqo-sg-tyT">
-                                <rect key="frame" x="0.0" y="514" width="600" height="78"/>
+                                <rect key="frame" x="0.0" y="514" width="600" height="86"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-2n-q51">
-                                        <rect key="frame" x="277" y="24" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYL-rt-TZq">
+                                        <rect key="frame" x="277" y="28" width="46" height="30"/>
                                         <state key="normal" title="home"/>
                                         <connections>
-                                            <segue destination="QvR-L5-vCV" kind="show" id="riS-dj-e0Q"/>
+                                            <segue destination="YzK-LF-gB0" kind="show" id="5ST-a6-PmP"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="2Uh-2n-q51" firstAttribute="centerX" secondItem="zqo-sg-tyT" secondAttribute="centerX" id="H3h-I3-kYR"/>
-                                    <constraint firstItem="2Uh-2n-q51" firstAttribute="centerY" secondItem="zqo-sg-tyT" secondAttribute="centerY" id="Y1b-t8-gFi"/>
+                                    <constraint firstItem="hYL-rt-TZq" firstAttribute="centerY" secondItem="zqo-sg-tyT" secondAttribute="centerY" id="NZG-hr-9DA"/>
+                                    <constraint firstItem="hYL-rt-TZq" firstAttribute="centerX" secondItem="zqo-sg-tyT" secondAttribute="centerX" id="kAR-Hv-60t"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="wKp-1n-wI1" secondAttribute="trailing" constant="-20" id="1pR-Ra-b4e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zqo-sg-tyT" secondAttribute="trailing" constant="-20" id="Ab8-r1-ee5"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="Ai7-QB-clx"/>
-                            <constraint firstItem="zqo-sg-tyT" firstAttribute="top" secondItem="wKp-1n-wI1" secondAttribute="bottom" constant="8" id="Aqa-KM-bhb"/>
+                            <constraint firstItem="zqo-sg-tyT" firstAttribute="top" secondItem="wKp-1n-wI1" secondAttribute="bottom" id="AiG-DS-vdT"/>
                             <constraint firstItem="CwZ-8V-dAb" firstAttribute="top" secondItem="iJr-RP-an8" secondAttribute="topMargin" id="K63-tI-f3G"/>
+                            <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="zqo-sg-tyT" secondAttribute="bottom" id="N8d-LU-0ax"/>
                             <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="aFZ-ac-d45" secondAttribute="bottom" id="OfR-GR-Dz3"/>
-                            <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="zqo-sg-tyT" secondAttribute="bottom" constant="8" id="R1X-Qp-3SA"/>
                             <constraint firstItem="xgn-9a-U0F" firstAttribute="trailing" secondItem="iJr-RP-an8" secondAttribute="trailingMargin" id="Rjx-PS-32I"/>
                             <constraint firstItem="CwZ-8V-dAb" firstAttribute="height" secondItem="iJr-RP-an8" secondAttribute="height" id="U6G-jq-gKL"/>
-                            <constraint firstItem="zqo-sg-tyT" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="XeD-zd-z8F"/>
                             <constraint firstItem="xgn-9a-U0F" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" id="YUX-o7-SJ5"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="centerY" secondItem="iJr-RP-an8" secondAttribute="centerY" id="ZN8-yK-2hE"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="centerX" secondItem="iJr-RP-an8" secondAttribute="centerX" id="aK7-v1-h5V"/>
                             <constraint firstItem="CwZ-8V-dAb" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="e5y-9W-jJ8"/>
                             <constraint firstItem="xgn-9a-U0F" firstAttribute="top" secondItem="Pgq-K5-BsW" secondAttribute="bottom" constant="8" id="elA-hp-lkI"/>
+                            <constraint firstItem="zqo-sg-tyT" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="lUR-B3-or6"/>
                             <constraint firstItem="aFZ-ac-d45" firstAttribute="top" secondItem="iJr-RP-an8" secondAttribute="topMargin" id="oYk-TY-ckC"/>
                             <constraint firstItem="06O-Y8-gza" firstAttribute="top" secondItem="CwZ-8V-dAb" secondAttribute="bottom" id="pLb-cH-Odg"/>
                             <constraint firstItem="wKp-1n-wI1" firstAttribute="height" secondItem="iJr-RP-an8" secondAttribute="height" multiplier="0.8" id="pQk-cv-AH4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aFZ-ac-d45" secondAttribute="trailing" constant="-20" id="rRo-gR-9rf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zqo-sg-tyT" secondAttribute="trailing" constant="-20" id="sq4-ng-lmW"/>
                             <constraint firstItem="aFZ-ac-d45" firstAttribute="leading" secondItem="iJr-RP-an8" secondAttribute="leadingMargin" constant="-20" id="yOf-8b-69B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CwZ-8V-dAb" secondAttribute="trailing" constant="-20" id="zSh-zJ-BsP"/>
                         </constraints>
@@ -321,12 +322,12 @@
             <point key="canvasLocation" x="1218" y="311"/>
         </scene>
         <!--Main-->
-        <scene sceneID="G5c-WS-VSa">
+        <scene sceneID="rgP-8m-7nx">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="QvR-L5-vCV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pka-nZ-IZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" id="YzK-LF-gB0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTo-J6-JvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="765"/>
+            <point key="canvasLocation" x="1212.5" y="672"/>
         </scene>
     </scenes>
 </document>
