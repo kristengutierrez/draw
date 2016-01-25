@@ -10,13 +10,13 @@
 #import "CustomPromptViewController.h"
 #import "ChooseOptionViewController.h"
 #import "GamePlayViewController.h"
-#import <CoreMotion/CoreMotion.h>
-
 
 @interface PassItOnViewController ()
 
-@property (nonatomic,strong) CMMotionActivityManager *motionActivityManager;
+@property (weak, nonatomic) IBOutlet UILabel *passDeviceLabel;
+@property (weak, nonatomic) IBOutlet UIStackView *nextPlayerReadyStackView;
 
+@property BOOL passDetected;
 
 @end
 
@@ -24,28 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-NSLog(@"number of players in choose pass it on vc: %ld", (long)self.numberOfPlayers);}
-
-
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (event.subtype == UIEventTypeMotion){
-        //there was motion
-        NSLog(@"***heyo there was motion");
-    }
+    
+    self.nextPlayerReadyStackView.hidden = YES;
+    self.passDeviceLabel.hidden = NO;
+    
+    [self performSelector:@selector(hideAndShowLabels)
+               withObject:(self)
+               afterDelay:(1.5)];
+    
 }
 
-
-- (void)detectPass {
-    self.motionActivityManager=[[CMMotionActivityManager alloc]init];
-    
-    //register for Coremotion notifications
-    [self.motionActivityManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMMotionActivity *activity){
-        NSLog(@"Current activity date is %f",activity.timestamp);
-
-        
-    }];
+-(void)hideAndShowLabels {
+    self.nextPlayerReadyStackView.hidden = NO;
+    self.passDeviceLabel.hidden = YES;
 }
 
 #pragma mark - Navigation
@@ -58,6 +49,9 @@ NSLog(@"number of players in choose pass it on vc: %ld", (long)self.numberOfPlay
         gamePlayVC.totalNumberOfRounds = self.numberOfPlayers;
         gamePlayVC.durationOfRound = self.durationOfRound;
     }
+    self.nextPlayerReadyStackView.hidden = YES;
+    self.passDeviceLabel.hidden = NO;
+    self.passDetected = NO;
 }
 
 @end

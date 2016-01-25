@@ -29,7 +29,6 @@
             <string>Avenir-Book</string>
             <string>Avenir-Heavy</string>
             <string>Avenir-Book</string>
-            <string>Avenir-Book</string>
             <string>Avenir-Heavy</string>
             <string>Avenir-Heavy</string>
             <string>Avenir-Heavy</string>
@@ -43,6 +42,7 @@
             <string>Avenir-Heavy</string>
             <string>Avenir-Light</string>
             <string>Avenir-Light</string>
+            <string>Avenir-Book</string>
             <string>Avenir-Book</string>
         </mutableArray>
     </customFonts>
@@ -859,29 +859,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-pL-la8">
-                                <rect key="frame" x="26" y="220" width="496" height="161"/>
+                                <rect key="frame" x="20" y="353" width="496" height="112"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass the device." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-fN-7Zf">
-                                        <rect key="frame" x="120" y="0.0" width="258" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="wUz-R7-KK1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="wUz-R7-KK1"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=regular">
-                                            <mask key="constraints">
-                                                <exclude reference="wUz-R7-KK1"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next player ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVo-3C-qHu">
-                                        <rect key="frame" x="97" y="50" width="303" height="50"/>
+                                        <rect key="frame" x="97" y="0.0" width="303" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="jWx-tW-ng3"/>
                                         </constraints>
@@ -899,8 +880,8 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0t-OI-DfQ">
-                                        <rect key="frame" x="152" y="99" width="192" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0t-OI-DfQ">
+                                        <rect key="frame" x="152" y="50" width="192" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="gAA-Vn-OYf"/>
                                             <constraint firstAttribute="height" constant="80" id="pu7-TR-wNP">
@@ -929,15 +910,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass the device." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-fN-7Zf">
+                                <rect key="frame" x="171" y="275" width="258" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="wUz-R7-KK1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wUz-R7-KK1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="wUz-R7-KK1"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="KTO-pL-la8" secondAttribute="trailing" constant="32" id="7BD-6i-7K0"/>
                             <constraint firstItem="KTO-pL-la8" firstAttribute="centerY" secondItem="t9O-Lk-Lmm" secondAttribute="centerY" id="7uk-Z2-XtP"/>
+                            <constraint firstItem="Yd5-fN-7Zf" firstAttribute="centerY" secondItem="t9O-Lk-Lmm" secondAttribute="centerY" id="Bdy-Kj-gUB"/>
                             <constraint firstItem="KTO-pL-la8" firstAttribute="centerX" secondItem="t9O-Lk-Lmm" secondAttribute="centerX" id="OZZ-PL-t6W"/>
                             <constraint firstItem="KTO-pL-la8" firstAttribute="leading" secondItem="t9O-Lk-Lmm" secondAttribute="leadingMargin" constant="32" id="dBW-ZF-XSa"/>
+                            <constraint firstItem="Yd5-fN-7Zf" firstAttribute="centerX" secondItem="t9O-Lk-Lmm" secondAttribute="centerX" id="obb-bK-Ze5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextPlayerReadyStackView" destination="KTO-pL-la8" id="Dq5-Ca-Z8Z"/>
+                        <outlet property="passDeviceLabel" destination="Yd5-fN-7Zf" id="IBC-L0-ydl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72b-E8-8h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
