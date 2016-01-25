@@ -39,20 +39,23 @@
     self.timerLabel.text = durationToString;
     self.sketchImageView.hidden = YES;
     
-//    [self.imageDescriptionTextField becomeFirstResponder];
     self.imageDescriptionTextField.delegate = self;
     
     self.jotVC = [[JotViewController alloc] init];
+    
     self.jotVC.delegate = self;
     self.jotVC.state = JotViewStateDrawing;
     [self addChildViewController:self.jotVC];
-    [self.drawingPadView addSubview:self.jotVC.view];
+    [self.view addSubview:self.jotVC.view];
     
-//    [cell setNeedsLayout];
-//    [cell layoutIfNeeded];
-    
-    //remove later
-//    self.totalNumberOfRounds = 4;
+    CGRect newFrame = CGRectMake(0, self.view.frame.size.height*0.25, self.view.frame.size.width, self.view.frame.size.height*0.75);
+    self.jotVC.view.frame = newFrame;
+
+    //[self.jotVC didMoveToParentViewController:self];
+//    self.jotVC.view.frame = self.drawingPadView.frame;
+//
+//    [self.drawingPadView setNeedsLayout];
+//    [self.drawingPadView layoutIfNeeded];
     
     self.roundCount = 0;
     self.passItOnViewTopConstraint.constant = -1000;
@@ -73,7 +76,9 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-
+//     if (self.roundCount % 2 == 0) {
+//         self.jotVC.view.hidden = NO;
+//     }
     
 }
 
@@ -97,6 +102,8 @@
 
 
 
+
+
 - (void)toggleRoundInterface {
     if (self.roundCount % 2 == 0) {
         //if in a drawing round, hide guessing tools
@@ -104,6 +111,7 @@
         self.imageDescriptionTextField.hidden = YES;
         self.sketchImageView.hidden = YES;
         self.drawingPadView.hidden = NO;
+//        self.jotVC.view.hidden = NO;
     } else {
         
         
@@ -112,10 +120,13 @@
         self.imageDescriptionTextField.hidden = NO;
         self.sketchImageView.hidden = NO;
         self.drawingPadView.hidden = YES;
+//        self.jotVC.view.hidden = YES;
+
     }
 }
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
+
     
     if ((self.roundCount % 2 != 0) && [self.imageDescriptionTextField.text  isEqual: @""]) {
         //alert
@@ -137,6 +148,7 @@
                 //but for now just save this
                 UIImage *savedImage = [self.jotVC renderImageWithScale:2.f onColor:self.view.backgroundColor];
                 [self.jotVC clearAll];
+                self.jotVC.view.hidden = YES;
                 
                 [self.arrayOfSketchesAndGuesses addObject:savedImage];
                 NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
@@ -161,7 +173,7 @@
                 [self.passItOnView layoutIfNeeded];
             } completion:^(BOOL finished){
                 self.imageDescriptionTextField.text = @"";
-                
+                self.jotVC.view.hidden = YES;
                 self.roundCount++;
                 [self toggleRoundInterface];
                 
@@ -211,6 +223,10 @@
     [UIView animateWithDuration:0.6 animations:^{
         self.passItOnViewTopConstraint.constant = -1000;
         [self.passItOnView layoutIfNeeded];
+         if (self.roundCount % 2 == 0) {
+             self.jotVC.view.hidden = NO;
+             
+         }
     }];
     
 }

@@ -51,17 +51,14 @@
   if (_categoriesArray.count >= remaining) {
     while (remaining > 0) {
       NSInteger k = arc4random_uniform((u_int32_t)j) % 7;
-//      NSLog(@"k = %ld", (long)k);
       
       NSString *string = _categoriesArray[k];
-//      NSLog(@"%@", string);
       if (![_thisRoundsArray containsObject:string]){
         [_thisRoundsArray addObject:string];
         remaining--;
       }
     }
   }
-//  NSLog(@" thisRoundsArray after: %lu", (unsigned long)_thisRoundsArray.count);
   
   NSLog(@"%@",_thisRoundsArray[0]);
     NSLog(@"%@",_thisRoundsArray[1]);
@@ -127,7 +124,6 @@
     NSLog(@"%@", self.categoryPressed);
     
     [self performSegueWithIdentifier:@"ShowOptions" sender:self];
-    
 }
 
 @end

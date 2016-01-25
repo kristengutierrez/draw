@@ -21,7 +21,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJe-Ch-325">
                                 <rect key="frame" x="0.0" y="150" width="600" height="450"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.41787370169999999" blue="0.54624038480000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="Wi8-l6-XgS"/>
                                     <constraint firstAttribute="height" constant="484" id="uhI-sG-XFo"/>
@@ -32,7 +32,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-9X-BaA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-9X-BaA">
                                 <rect key="frame" x="0.0" y="150" width="600" height="450"/>
                                 <color key="backgroundColor" red="0.45394691139999999" green="1" blue="0.89364850500000004" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -134,9 +134,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u9-a1-u2T">
-                                                <rect key="frame" x="129" y="50" width="43" height="51"/>
+                                                <rect key="frame" x="134" y="50" width="33" height="51"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
-                                                <state key="normal" title="yes">
+                                                <state key="normal" title="ok">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -215,7 +215,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVe-vh-XYM">
                                         <rect key="frame" x="203" y="-301" width="194" height="30"/>
-                                        <state key="normal" title="click to view game summary"/>
+                                        <state key="normal" title="click to view game summary">
+                                            <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="clickToViewGameSummary:" destination="Hle-U0-Eep" eventType="touchUpInside" id="QcS-YW-E75"/>
                                         </connections>
@@ -254,7 +256,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYL-rt-TZq">
                                         <rect key="frame" x="277" y="28" width="46" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
-                                        <state key="normal" title="home"/>
+                                        <state key="normal" title="home">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="YzK-LF-gB0" kind="show" id="5ST-a6-PmP"/>
                                         </connections>
