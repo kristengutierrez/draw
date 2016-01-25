@@ -249,6 +249,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYL-rt-TZq">
                                         <rect key="frame" x="277" y="28" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
                                         <state key="normal" title="home"/>
                                         <connections>
                                             <segue destination="YzK-LF-gB0" kind="show" id="5ST-a6-PmP"/>
