@@ -35,10 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSLog(@"total num of rounds: %@", self.totalNumberOfRounds);
-    
-//    [self timeIsUp];
-    
+    NSString *durationToString = [NSString stringWithFormat: @"%ld", (long)self.durationOfRound];
+    self.timerLabel.text = durationToString;
     self.sketchImageView.hidden = YES;
     
 //    [self.imageDescriptionTextField becomeFirstResponder];
