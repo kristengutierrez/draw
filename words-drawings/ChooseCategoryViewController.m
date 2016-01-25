@@ -41,7 +41,7 @@
     NSLog(@"number of players in choose category vc: %ld", (long)self.numberOfPlayers);
   
   _thisRoundsArray = [[NSMutableArray alloc] init];
-  _categoriesArray = [NSMutableArray arrayWithObjects: @"FILM & TV", @"MUSIC", @"SPORTS", @"HISTORY", @"SCIENCE", @"GEOGRAPHY", @"THE ARTS", nil];
+  _categoriesArray = [NSMutableArray arrayWithObjects: @"Movies", @"People", @"Idioms", @"Books", @"Geography", @"Random", nil];
   
   NSInteger j = [_categoriesArray count];
   
@@ -50,7 +50,7 @@
   
   if (_categoriesArray.count >= remaining) {
     while (remaining > 0) {
-      NSInteger k = arc4random_uniform((u_int32_t)j) % 7;
+      NSInteger k = arc4random_uniform((u_int32_t)j) % 6;
       
       NSString *string = _categoriesArray[k];
       if (![_thisRoundsArray containsObject:string]){
