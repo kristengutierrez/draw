@@ -35,7 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self timeIsUp];
+//    NSLog(@"total num of rounds: %@", self.totalNumberOfRounds);
+    
+//    [self timeIsUp];
     
     self.sketchImageView.hidden = YES;
     
@@ -114,6 +116,9 @@
 }
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
+    
+    NSLog(@"yes pressed");
+    
     [self.imageDescriptionTextField resignFirstResponder];
     
     if (self.roundCount < self.totalNumberOfRounds) {

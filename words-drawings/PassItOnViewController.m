@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
+NSLog(@"number of players in choose pass it on vc: %ld", (long)self.numberOfPlayers);}
 
 
 

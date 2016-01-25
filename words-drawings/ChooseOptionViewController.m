@@ -47,6 +47,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"number of players in choose option vc: %ld", (long)self.numberOfPlayers);
+    
+    
   [self.option1Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
   [self.option2Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
   [self.option3Button.titleLabel setTextAlignment:NSTextAlignmentCenter];

@@ -660,10 +660,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="goBack:" destination="8NM-oV-yso" eventType="touchUpInside" id="7QM-Z8-fIc"/>
-                                    <action selector="goBack:" destination="wY1-Yb-Itn" eventType="touchUpInside" id="htl-ms-jju"/>
                                     <action selector="nextButtonPressed:" destination="T7h-Qb-fKZ" eventType="touchUpInside" id="Rbm-Qg-l5F"/>
-                                    <segue destination="8NM-oV-yso" kind="show" id="cuw-hm-s3N"/>
+                                    <segue destination="8NM-oV-yso" kind="show" identifier="ShowCategories" id="KMU-t5-dwS"/>
                                 </connections>
                             </button>
                         </subviews>

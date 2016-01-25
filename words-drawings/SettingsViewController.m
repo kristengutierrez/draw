@@ -96,7 +96,7 @@ NSInteger numberOfSecondsToIncrease = 10;
 
 - (IBAction)nextButtonPressed:(id)sender {
   NSLog(@"next button was pressed in settingsVC");
-  //[self performSegueWithIdentifier:@"ShowCategories" sender:self];
+//  [self performSegueWithIdentifier:@"ShowCategories" sender:self];
 }
 
 @end
