@@ -35,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self timeIsUp];
+    
     self.sketchImageView.hidden = YES;
     
 //    [self.imageDescriptionTextField becomeFirstResponder];
@@ -83,7 +85,14 @@
     return NO;
 }
 
-
+- (void)timeIsUp {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Your time is up!" message:@"Finish and pass the device to the next player." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:ok];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 
 - (void)toggleRoundInterface {
