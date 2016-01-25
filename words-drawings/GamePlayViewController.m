@@ -95,6 +95,8 @@
 }
 
 
+
+
 - (void)toggleRoundInterface {
     if (self.roundCount % 2 == 0) {
         //if in a drawing round, hide guessing tools
@@ -115,55 +117,70 @@
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
     
-    NSLog(@"yes pressed");
-    
-    [self.imageDescriptionTextField resignFirstResponder];
-    
-    if (self.roundCount < self.totalNumberOfRounds) {
-        if (self.roundCount % 2 == 0) {
-            //if in a drawing round
+    if ((self.roundCount % 2 != 0) && [self.imageDescriptionTextField.text  isEqual: @""]) {
+        //alert
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Please enter a guess." message:nil preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    } else {
+        //proceed
+        [self.imageDescriptionTextField resignFirstResponder];
+        
+        if (self.roundCount < self.totalNumberOfRounds) {
+            if (self.roundCount % 2 == 0) {
+                //if in a drawing round
+                
+                //save what is in the drawing pad uiview as a uiimage
+                //but for now just save this
+                UIImage *savedImage = [self.jotVC renderImageWithScale:2.f onColor:self.view.backgroundColor];
+                [self.jotVC clearAll];
+                
+                [self.arrayOfSketchesAndGuesses addObject:savedImage];
+                NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
+                
+                self.sketchImageView.image = savedImage;
+                
+            } else {
+                
+                //if in a guessing round
+                [self viewDidAppear:true];
+                
+                
+                NSString *guess = self.imageDescriptionTextField.text;
+                [self.arrayOfSketchesAndGuesses addObject:guess];
+                
+                self.textBoxLabel.text = self.imageDescriptionTextField.text;
+            }
             
-            //save what is in the drawing pad uiview as a uiimage
-            //but for now just save this
-            UIImage *savedImage = [self.jotVC renderImageWithScale:2.f onColor:self.view.backgroundColor];
-            [self.jotVC clearAll];
             
-            [self.arrayOfSketchesAndGuesses addObject:savedImage];
-            NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
+            [UIView animateWithDuration:0.6 animations:^{
+                self.passItOnViewTopConstraint.constant = 0;
+                [self.passItOnView layoutIfNeeded];
+            } completion:^(BOOL finished){
+                self.imageDescriptionTextField.text = @"";
+                
+                self.roundCount++;
+                [self toggleRoundInterface];
+                
+            }];
             
-            self.sketchImageView.image = savedImage;
-            
+            if (self.roundCount == self.totalNumberOfRounds - 1) {
+                [self performSegueWithIdentifier:@"goToEndGame" sender:nil];
+            }
         } else {
             
-            //if in a guessing round
-            [self viewDidAppear:true];
-            
-            
-            NSString *guess = self.imageDescriptionTextField.text;
-            [self.arrayOfSketchesAndGuesses addObject:guess];
-            
-            self.textBoxLabel.text = self.imageDescriptionTextField.text;
         }
-        
-        
-        [UIView animateWithDuration:0.6 animations:^{
-            self.passItOnViewTopConstraint.constant = 0;
-            [self.passItOnView layoutIfNeeded];
-        } completion:^(BOOL finished){
-            self.imageDescriptionTextField.text = @"";
 
-            self.roundCount++;
-            [self toggleRoundInterface];
-            
-        }];
-        
-        if (self.roundCount == self.totalNumberOfRounds - 1) {
-            [self performSegueWithIdentifier:@"goToEndGame" sender:nil];
-        }
-    } else {
-        
     }
-  
+    
+    
+    
+    
+    
+    
     
 }
 
