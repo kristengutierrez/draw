@@ -147,8 +147,8 @@
                 //save what is in the drawing pad uiview as a uiimage
                 //but for now just save this
                 UIImage *savedImage = [self.jotVC renderImageWithScale:2.f onColor:self.view.backgroundColor];
-                [self.jotVC clearAll];
-                self.jotVC.view.hidden = YES;
+//                [self.jotVC clearAll];
+//                self.jotVC.view.hidden = YES;
                 
                 [self.arrayOfSketchesAndGuesses addObject:savedImage];
                 NSLog(@"array count: %lu", (unsigned long)self.arrayOfSketchesAndGuesses.count);
@@ -167,13 +167,14 @@
                 self.textBoxLabel.text = self.imageDescriptionTextField.text;
             }
             
-            
-            [UIView animateWithDuration:0.6 animations:^{
+            [self.jotVC clearAll];
+            self.jotVC.view.hidden = YES;
+            [UIView animateWithDuration:0.5 animations:^{
+
                 self.passItOnViewTopConstraint.constant = 0;
                 [self.passItOnView layoutIfNeeded];
             } completion:^(BOOL finished){
                 self.imageDescriptionTextField.text = @"";
-                self.jotVC.view.hidden = YES;
                 self.roundCount++;
                 [self toggleRoundInterface];
                 
