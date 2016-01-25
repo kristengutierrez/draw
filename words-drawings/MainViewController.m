@@ -11,8 +11,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "BetterInstructionsViewController.h"
 
-CGFloat const kInstructionMenuHeightMultiplier = 0.75;
-CGFloat const kInstructionMenuWidthMultiplier = 0.75;
+CGFloat const kInstructionMenuHeightMultiplier = 0.85;
+CGFloat const kInstructionMenuWidthMultiplier = 0.85;
 
 @interface MainViewController ()
 - (IBAction)instructionsButton:(id)sender;

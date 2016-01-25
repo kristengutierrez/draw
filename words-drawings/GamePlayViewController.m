@@ -41,6 +41,7 @@
     
     self.imageDescriptionTextField.delegate = self;
     
+    
     self.jotVC = [[JotViewController alloc] init];
     
     self.jotVC.delegate = self;
@@ -51,11 +52,7 @@
     CGRect newFrame = CGRectMake(0, self.view.frame.size.height*0.25, self.view.frame.size.width, self.view.frame.size.height*0.75);
     self.jotVC.view.frame = newFrame;
 
-    //[self.jotVC didMoveToParentViewController:self];
-//    self.jotVC.view.frame = self.drawingPadView.frame;
-//
-//    [self.drawingPadView setNeedsLayout];
-//    [self.drawingPadView layoutIfNeeded];
+    self.jotVC.drawingStrokeWidth = 4.f;
     
     self.roundCount = 0;
     self.passItOnViewTopConstraint.constant = -1000;
