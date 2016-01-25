@@ -17,6 +17,8 @@ NSInteger numberOfSecondsToIncrease = 10;
 - (IBAction)numberOfPlayersDecreaseButtonPressed:(id)sender;
 - (IBAction)numberOfPlayersIncreaseButtonPressed:(id)sender;
 
+- (IBAction)goBack:(UIButton *)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSecondsForRoundLabel;
 
 - (IBAction)numberOfSecondsInRoundDecreaseButtonPressed:(id)sender;
@@ -41,6 +43,10 @@ NSInteger numberOfSecondsToIncrease = 10;
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)goBack:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
