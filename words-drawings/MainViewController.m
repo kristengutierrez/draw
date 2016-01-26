@@ -11,8 +11,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "BetterInstructionsViewController.h"
 
-CGFloat const kInstructionMenuHeightMultiplier = 0.75;
-CGFloat const kInstructionMenuWidthMultiplier = 0.75;
+CGFloat const kInstructionMenuHeightMultiplier = 0.85;
+CGFloat const kInstructionMenuWidthMultiplier = 0.85;
 
 @interface MainViewController ()
 - (IBAction)instructionsButton:(id)sender;
@@ -24,14 +24,26 @@ CGFloat const kInstructionMenuWidthMultiplier = 0.75;
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  //UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 50.0f)];
-  //  CAGradientLayer *gradient = [CAGradientLayer layer];
-  //  gradient.frame = self.view.bounds;
-  //  gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor blueColor] CGColor], (id)[[UIColor blackColor] CGColor], nil];
-  //  [self.view.layer insertSublayer:gradient atIndex:0];
-  //  CAGradientLayer *bg = [BackgroundGradient blueGradient];
-  //  bg.frame = self.view.bounds;
-  //  [self.view.layer insertSublayer:bg atIndex:0];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:166.0f/255.0f
+                                                                     green:216.0f/255.0f
+                                                                      blue:215.0f/255.0f
+                                                                     alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:227.0f/255.0f
+                                                                        green:80.0f/255.0f
+                                                                                                         blue:88.0f/255.0f
+                                                                                                                alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:235.0f/255.0f
+                                                                                                                                                           green:32.0f/255.0f
+                                                                                                                                                            blue:71.0f/255.0f
+                                                                                                                                                           alpha:1.0f] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    CAGradientLayer *bg = [BackgroundGradient blueGradient];
+    bg.frame = self.view.bounds;
+    
+    gradient.locations = @[ @(0.11f), @(0.999f), @(1.0) ];
+
+    
+    [self.view.layer insertSublayer:bg atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {

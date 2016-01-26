@@ -27,12 +27,12 @@
 @property (strong, nonatomic) NSString *selectedOption;
 
 @property (strong,nonatomic) NSMutableArray *filmAndTVArray;
-@property (strong,nonatomic) NSMutableArray *musicArray;
-@property (strong,nonatomic) NSMutableArray *sportsArray;
-@property (strong,nonatomic) NSMutableArray *historyArray;
+@property (strong,nonatomic) NSMutableArray *peopleArray;
+@property (strong,nonatomic) NSMutableArray *idiomsArray;
+@property (strong,nonatomic) NSMutableArray *booksArray;
 @property (strong,nonatomic) NSMutableArray *scienceArray;
 @property (strong,nonatomic) NSMutableArray *geographyArray;
-@property (strong,nonatomic) NSMutableArray *theArtsArray;
+@property (strong,nonatomic) NSMutableArray *randomArray;
 
 @property (strong,nonatomic) NSMutableArray *thisRoundsPromptsArray;
 
@@ -47,6 +47,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"number of players in choose option vc: %ld", (long)self.numberOfPlayers);
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:166.0f/255.0f
+                                                                     green:216.0f/255.0f
+                                                                      blue:215.0f/255.0f
+                                                                     alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:227.0f/255.0f
+                                                                                                                green:80.0f/255.0f
+                                                                                                                 blue:88.0f/255.0f
+                                                                                                                alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:235.0f/255.0f
+                                                                                                                                                           green:32.0f/255.0f
+                                                                                                                                                            blue:71.0f/255.0f
+                                                                                                                                                           alpha:1.0f] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    //    CAGradientLayer *bg = [BackgroundGradient blueGradient];
+    //    bg.frame = self.view.bounds;
+    
+    gradient.locations = @[ @(0.11f), @(0.999f), @(1.0) ];
+
+    
+    
   [self.option1Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
   [self.option2Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
   [self.option3Button.titleLabel setTextAlignment:NSTextAlignmentCenter];
@@ -58,46 +81,37 @@
   NSLog(@"You chose... wisely: %@", self.chosenCategory);
   
   
-   _filmAndTVArray = [NSMutableArray arrayWithObjects: @"The Godfather", @"Indiana Jones and The Last Crusade", @"Woody Allen", @"Steven Spielberg", @"Rocky", @"Rushmore", @"Back to the Future II", @"Alice in Wonderland", @"Boogie Nights", @"Space Jam", @"Mission: Impossible", @"Annie Hall", @"Being John Malkovich", @"Metropolis", @"The Dark Crystal", @"Vertigo", @"Star Trek", @"Iron Man", @"Hannibal", @"Meet the Parents", @"Beetlejuice", @"Seinfeld", @"Gilligan's Island", @"Home Improvement", @"Arrested Development", @"Mork and Mindy", @"GI-Joe", @"Weeds", @"Lost", @"The Twilight Zone", @"24", @"House, M.D.", nil];
+   self.filmAndTVArray = [NSMutableArray arrayWithObjects: @"Tangled", @"Forrest Gump", @"Spider-Man", @"Inception", @"Rocky", @"Rushmore", @"The Goonies", @"Alice in Wonderland", @"Toy Story", @"Space Jam", @"Taken", @"Monsters, Inc.", @"Being John Malkovich", @"Metropolis", @"The Dark Crystal", @"Star Trek", @"Iron Man", @"101 Dalmations", @"Beetlejuice", nil];
    
-   _musicArray = [NSMutableArray arrayWithObjects: @"Madonna", @"Beethoven", @"Heartbreak Hotel", @"U Can't Touch This", @"Thriller", @"The Sound of Silence", @"Glenn Gould", @"November Rain", @"Paranoid Android", @"Magical Mystery Tour", @"John Cage", @"Nirvana", @"Michael Jackson", @"Frank Sinatra", @"Katy Perry", @"Tiny Tim", @"Bohemian Rhapsody", @"Enya", @"California Girls", @"Linda McCartney", nil];
+   self.peopleArray = [NSMutableArray arrayWithObjects: @"Madonna", @"Beethoven", @"Charlie Chaplin", @"Jim Carrey", @"Henry Ford", @"Houdini", @"Hillary Clinton", @"Weird Al", @"Albert Einstein", @"Mr. Rogers", @"John Cage", @"Cleopatra", @"Michael Jackson", @"Frank Sinatra", @"Katy Perry", @"Thomas Edison", @"Neil Armstrong", @"Elvis", @"Dr. Seuss", @"Linda McCartney", nil];
    
-   _sportsArray = [NSMutableArray arrayWithObjects: @"Babe Ruth", @"Magic Johnson", @"7th Inning Stretch", @"Dennis Rodman", @"Michael Jordan", @"Shea Stadium", @"Chicago White Sox", @"San Francisco Giants", @"St. Louis Cardinals", @"The Rose Bowl", @"Cricket", nil];
+   self.idiomsArray = [NSMutableArray arrayWithObjects: @"apple of my eye", @"the bee's knees", @"out of this world", @"teacher's pet", @"close but no cigar", @"on the same page", @"peas in a pod", @"scared stiff", @"smarty pants", nil];
    
-   _historyArray = [NSMutableArray arrayWithObjects: @"The French Revolution", @"The Cuban Missle Crisis", @"Catherine the Great", @"D-Day", @"Elvis meets Nixon", @"Washington Crossing the Delaware", @"The Discovery of King Tut's Tomb", @"The War of 1812", nil];
+   self.booksArray = [NSMutableArray arrayWithObjects: @"The Shining", @"Green Eggs and Ham", @"1984", @"Gone With the Wind", @"White Fang", @"The Hobbit", @"Frankenstein", @"Moby-Dick", nil];
    
-   _scienceArray = [NSMutableArray arrayWithObjects: @"Carl Sagan", @"Relativity", @"Jonas Salk", @"Isaac Newton", @"protons", @"gravity", @"Dark Matter", @"Chemistry", @"Biology", @"Vaccinations", nil];
+   self.geographyArray = [NSMutableArray arrayWithObjects: @"Paris", @"Antarctica", @"Las Vegas", @"Tokyo", @"Chicago", @"The Nile River", @"China", @"Mexico", @"Pacific Ocean", @"Orlando", @"India", @"Canada", @"Brazil", nil];
    
-//   _natureArray = [NSMutableArray arrayWithObjects: @"Three-Toed Sloths", @"Mt. Rainier", @"The Grand Canyon", @"The Pacific Ocean", nil];
-   
-   _geographyArray = [NSMutableArray arrayWithObjects: @"Paris", @"Antarctica", @"Las Vegas", @"South Dakota", @"Chicago", @"The Nile River", @"China", @"Malta", @"The Isle of Man", @"Orlando", @"Botswana", @"Argentina", @"Brazil", @"The Grand Canyon", @"South Africa", nil];
-   
-   _theArtsArray = [NSMutableArray arrayWithObjects: @"The Mona Lisa", @"Pablo Picasso", @"Girl With Pearl Earring", @"Guernica", @"A Tale of Two Cities", @"Where the Sidewalk Ends", @"The Hobbit", @"Nausea", nil];
-   
-//   _literatureArray = [NSMutableArray arrayWithObjects: @"A Tale of Two Cities", @"Where the Sidewalk Ends", @"The Hobbit", @"Nausea", nil];
-   
-//   _zanyMiscellanyArray = [NSMutableArray arrayWithObjects: @"42", @"Penguins Playing Golf", @"Insomnia", @"Public Restroom", @"Grumpy Cat", @"Prom Night", @"Cat Fight", @"Mom Jeans", @"Ed Bassmaster", nil];
+   self.randomArray = [NSMutableArray arrayWithObjects: @"pirate's booty", @"sushi", @"Bill Murray", @"organ donor", @"wooly mammoth", @"raining cats and dogs", @"white lie", @"Paranoid Android", nil];
+
     
   self.chosenCategoryLabel.text = self.chosenCategory;
 
   _pickedObjects = [[NSMutableArray alloc] init];
-  
-  //_pickedObjects = _filmAndTVArray;
-  
-  if ([_chosenCategory isEqualToString:@"FILM & TV"]){
+    
+  if ([_chosenCategory isEqualToString:@"Movies"]){
     _pickedObjects = _filmAndTVArray;
-  } else if ([_chosenCategory isEqualToString:@"MUSIC"]){
-    _pickedObjects = _musicArray;
-  } else if ([_chosenCategory isEqualToString:@"SPORTS"]){
-    _pickedObjects = _sportsArray;
-  } else if ([_chosenCategory isEqualToString:@"HISTORY"]){
-    _pickedObjects = _historyArray;
+  } else if ([_chosenCategory isEqualToString:@"People"]){
+    _pickedObjects = _peopleArray;
+  } else if ([_chosenCategory isEqualToString:@"Idioms"]){
+    _pickedObjects = _idiomsArray;
+  } else if ([_chosenCategory isEqualToString:@"Books"]){
+    _pickedObjects = _booksArray;
   } else if ([_chosenCategory isEqualToString:@"SCIENCE"]){
     _pickedObjects = _scienceArray;
-  } else if ([_chosenCategory isEqualToString:@"GEOGRAPHY"]){
+  } else if ([_chosenCategory isEqualToString:@"Geography"]){
     _pickedObjects = _geographyArray;
-  } else if ([_chosenCategory isEqualToString:@"THE ARTS"]){
-    _pickedObjects = _theArtsArray;
+  } else if ([_chosenCategory isEqualToString:@"Random"]){
+    _pickedObjects = _randomArray;
   }
     
 

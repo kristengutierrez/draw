@@ -17,6 +17,8 @@ NSInteger numberOfSecondsToIncrease = 10;
 - (IBAction)numberOfPlayersDecreaseButtonPressed:(id)sender;
 - (IBAction)numberOfPlayersIncreaseButtonPressed:(id)sender;
 
+- (IBAction)goBack:(UIButton *)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSecondsForRoundLabel;
 
 - (IBAction)numberOfSecondsInRoundDecreaseButtonPressed:(id)sender;
@@ -34,6 +36,25 @@ NSInteger numberOfSecondsToIncrease = 10;
   [super viewDidLoad];
   self.numberOfPlayers = 3;
   self.durationOfRound = 20;
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:166.0f/255.0f
+                                                                     green:216.0f/255.0f
+                                                                      blue:215.0f/255.0f
+                                                                     alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:227.0f/255.0f
+                                                                                                                green:80.0f/255.0f
+                                                                                                                 blue:88.0f/255.0f
+                                                                                                                alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:235.0f/255.0f
+                                                                                                                                                           green:32.0f/255.0f
+                                                                                                                                                            blue:71.0f/255.0f
+                                                                                                                                                           alpha:1.0f] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+//    CAGradientLayer *bg = [BackgroundGradient blueGradient];
+//    bg.frame = self.view.bounds;
+    
+    gradient.locations = @[ @(0.11f), @(0.999f), @(1.0) ];
+
   
   // Do any additional setup after loading the view.
 }
@@ -41,6 +62,10 @@ NSInteger numberOfSecondsToIncrease = 10;
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)goBack:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -90,7 +115,7 @@ NSInteger numberOfSecondsToIncrease = 10;
 
 - (IBAction)nextButtonPressed:(id)sender {
   NSLog(@"next button was pressed in settingsVC");
-  //[self performSegueWithIdentifier:@"ShowCategories" sender:self];
+//  [self performSegueWithIdentifier:@"ShowCategories" sender:self];
 }
 
 @end

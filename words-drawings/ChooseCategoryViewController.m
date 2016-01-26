@@ -8,27 +8,23 @@
 
 #import "ChooseCategoryViewController.h"
 #import "ChooseOptionViewController.h"
-#import "SeedViewController.h"
+#import "CustomPromptViewController.h"
 #import <stdlib.h>
 
 @interface ChooseCategoryViewController ()
 
 @property (strong,nonatomic) NSString *categoryPressed;
-
 - (IBAction)goBack:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *category1Button;
 @property (weak, nonatomic) IBOutlet UIButton *category2Button;
 @property (weak, nonatomic) IBOutlet UIButton *category3Button;
-@property (weak, nonatomic) IBOutlet UIButton *diyButton;
-
+@property (weak, nonatomic) IBOutlet UIButton *category4Button;
 
 - (IBAction)category1Pressed:(UIButton *)sender;
 - (IBAction)category2Pressed:(UIButton *)sender;
 - (IBAction)category3Pressed:(UIButton *)sender;
-- (IBAction)diyPressed:(UIButton *)sender;
-
-
+- (IBAction)category4Pressed:(UIButton *)sender;
 
 @property (strong,nonatomic) NSMutableArray *categoriesArray;
 @property (strong,nonatomic) NSMutableArray *thisRoundsArray;
@@ -41,37 +37,59 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:166.0f/255.0f
+                                                                     green:216.0f/255.0f
+                                                                      blue:215.0f/255.0f
+                                                                     alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:227.0f/255.0f
+                                                                                                                green:80.0f/255.0f
+                                                                                                                 blue:88.0f/255.0f
+                                                                                                                alpha:1.0f] CGColor], (id)[[UIColor colorWithRed:235.0f/255.0f
+                                                                                                                                                           green:32.0f/255.0f
+                                                                                                                                                            blue:71.0f/255.0f
+                                                                                                                                                           alpha:1.0f] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    //    CAGradientLayer *bg = [BackgroundGradient blueGradient];
+    //    bg.frame = self.view.bounds;
+    
+    gradient.locations = @[ @(0.11f), @(0.999f), @(1.0) ];
+
+    
+    NSLog(@"number of players in choose category vc: %ld", (long)self.numberOfPlayers);
   
   _thisRoundsArray = [[NSMutableArray alloc] init];
-  
-  _categoriesArray = [NSMutableArray arrayWithObjects: @"FILM & TV", @"MUSIC", @"SPORTS", @"HISTORY", @"SCIENCE", @"GEOGRAPHY", @"THE ARTS", nil];
+  _categoriesArray = [NSMutableArray arrayWithObjects: @"Movies", @"People", @"Idioms", @"Books", @"Geography", @"Random", nil];
   
   NSInteger j = [_categoriesArray count];
   
-  //randomize category selections. will always display 3 randomized options, plus DIY option.
-  int remaining = 3;
+  //randomize category selections, display 4 randomized options
+  int remaining = 4;
   
   if (_categoriesArray.count >= remaining) {
     while (remaining > 0) {
-      NSInteger k = arc4random_uniform((u_int32_t)j) % 7;
-      NSLog(@"k = %ld", (long)k);
+      NSInteger k = arc4random_uniform((u_int32_t)j) % 6;
       
       NSString *string = _categoriesArray[k];
-      NSLog(@"%@", string);
       if (![_thisRoundsArray containsObject:string]){
         [_thisRoundsArray addObject:string];
         remaining--;
       }
     }
   }
-  NSLog(@" thisRoundsArray after: %lu", (unsigned long)_thisRoundsArray.count);
   
   NSLog(@"%@",_thisRoundsArray[0]);
+    NSLog(@"%@",_thisRoundsArray[1]);
+    NSLog(@"%@",_thisRoundsArray[2]);
+    NSLog(@"%@",_thisRoundsArray[3]);
   
   //set text on buttons
-  [_category1Button setTitle: _thisRoundsArray[0] forState: UIControlStateNormal];
-  [_category2Button setTitle: _thisRoundsArray[1] forState: UIControlStateNormal];
-  [_category3Button setTitle: _thisRoundsArray[2] forState: UIControlStateNormal];
+  [self.category1Button setTitle: _thisRoundsArray[0] forState: UIControlStateNormal];
+  [self.category2Button setTitle: _thisRoundsArray[1] forState: UIControlStateNormal];
+  [self.category3Button setTitle: _thisRoundsArray[2] forState: UIControlStateNormal];
+  [self.category4Button setTitle: _thisRoundsArray[3] forState: UIControlStateNormal];
+    [self viewDidAppear:true];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,7 +108,7 @@
     chooseOptionVC.numberOfPlayers = self.numberOfPlayers;
     chooseOptionVC.durationOfRound = self.durationOfRound;
   } else if ([[segue identifier] isEqualToString:@"showSeedVC"]){
-    SeedViewController *seedVC = (SeedViewController *)[segue destinationViewController];
+    CustomPromptViewController *seedVC = (CustomPromptViewController *)[segue destinationViewController];
     seedVC.numberOfPlayers = self.numberOfPlayers;
     seedVC.durationOfRound = self.durationOfRound;
   }
@@ -110,21 +128,21 @@
 - (IBAction)category2Pressed:(UIButton *)sender {
   self.categoryPressed = _thisRoundsArray[1];
   NSLog(@"%@", self.categoryPressed);
-  //[self selectArray:self.categoryPressed];
-  //self.selectedArray = _filmAndTVArray;
-  //NSLog(@"ARRAY WAS>>> %@", self.selectedArray);
+ 
   [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
 - (IBAction)category3Pressed:(UIButton *)sender {
   self.categoryPressed = _thisRoundsArray[2];
   NSLog(@"%@", self.categoryPressed);
-  //[self selectArray:self.categoryPressed];
-  //self.selectedArray = _filmAndTVArray;
-  //NSLog(@"ARRAY WAS>>> %@", self.selectedArray);
+ 
   [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
 
-- (IBAction)diyPressed:(UIButton *)sender {
+- (IBAction)category4Pressed:(UIButton *)sender {
+    self.categoryPressed = _thisRoundsArray[3];
+    NSLog(@"%@", self.categoryPressed);
+    
+    [self performSegueWithIdentifier:@"ShowOptions" sender:self];
 }
 
 @end
