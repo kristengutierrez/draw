@@ -35,7 +35,7 @@ NSInteger numberOfSecondsToIncrease = 10;
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.numberOfPlayers = 3;
-  self.durationOfRound = 20;
+  self.durationOfRound = 30;
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.view.bounds;
@@ -98,7 +98,7 @@ NSInteger numberOfSecondsToIncrease = 10;
 
 - (IBAction)numberOfSecondsInRoundIncreaseButtonPressed:(id)sender {
   
-  if (self.durationOfRound < 60) {
+  if (self.durationOfRound < 90) {
     self.durationOfRound = self.durationOfRound + numberOfSecondsToIncrease;
     NSString *newDurationString = [NSString stringWithFormat: @"%ld", (long)self.durationOfRound];
     self.numberOfSecondsForRoundLabel.text = newDurationString;
