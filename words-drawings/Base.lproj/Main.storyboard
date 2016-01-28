@@ -363,6 +363,9 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 </variation>
@@ -381,6 +384,9 @@
                                                     <mask key="constraints">
                                                         <exclude reference="jIz-F8-uzQ"/>
                                                     </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
@@ -403,6 +409,9 @@
                                                     <mask key="constraints">
                                                         <exclude reference="YbF-sR-cm3"/>
                                                     </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
@@ -448,6 +457,9 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 </variation>
@@ -483,6 +495,9 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 </variation>
@@ -504,6 +519,9 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
                                                 </variation>
@@ -522,6 +540,9 @@
                                                     <mask key="constraints">
                                                         <exclude reference="cbL-LW-eGd"/>
                                                     </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
@@ -544,6 +565,9 @@
                                                     <mask key="constraints">
                                                         <exclude reference="YJ8-1F-i0y"/>
                                                     </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="48"/>
@@ -746,6 +770,9 @@
                                 <state key="normal" title="[option 2]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -764,6 +791,9 @@
                                 <state key="normal" title="[option 3]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -782,6 +812,9 @@
                                 <state key="normal" title="[option 1]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -838,6 +871,9 @@
                                 <state key="normal" title="[option 4]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -919,6 +955,9 @@
                                                 <exclude reference="jWx-tW-ng3"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="38"/>
+                                        </variation>
                                         <variation key="widthClass=regular">
                                             <mask key="constraints">
                                                 <exclude reference="jWx-tW-ng3"/>
@@ -948,6 +987,9 @@
                                                 <exclude reference="gAA-Vn-OYf"/>
                                                 <exclude reference="pu7-TR-wNP"/>
                                             </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
                                         </variation>
                                         <variation key="widthClass=regular">
                                             <mask key="constraints">
@@ -982,6 +1024,9 @@
                                     <mask key="constraints">
                                         <exclude reference="wUz-R7-KK1"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="38"/>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
@@ -1045,6 +1090,9 @@
                                 <state key="normal" title="[category 2]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -1063,6 +1111,9 @@
                                 <state key="normal" title="[category 3]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -1090,6 +1141,9 @@
                                 <state key="normal" title="[category 1]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -1139,6 +1193,9 @@
                                 <state key="normal" title="[category 4]">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
                                 </variation>
@@ -1249,6 +1306,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=compact" misplaced="YES">
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                             <rect key="frame" x="144.5" y="8" width="240" height="61.5"/>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=regular">
@@ -1266,6 +1324,7 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="36"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=compact" misplaced="YES">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                             <rect key="frame" x="8" y="77.5" width="512" height="262.5"/>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=regular">
